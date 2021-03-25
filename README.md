@@ -3,14 +3,23 @@
 ## Table of contents
 
 - [Master the Coding Interview: Data Structures + Algorithms](#master-the-coding-interview-data-structures--algorithms)
+
   - [Table of contents](#table-of-contents)
   - [**Section 1: Introduction**](#section-1-introduction)
   - [**Section 2: Getting More Interviews**](#section-2-getting-more-interviews)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Resume](#resume)
     - [What If I Don't Have Enough Experience?](#what-if-i-dont-have-enough-experience)
     - [Portfolio](#portfolio)
     - [Where To Find Jobs?](#where-to-find-jobs)
+    </details>
+
   - [**Section 3: Big O**](#section-3-big-o)
+    <details>
+    <summary>Click to expand!</summary>
+      
     - [Setting Up Your Environment](#setting-up-your-environment)
     - [What Is Good Code?](#what-is-good-code)
     - [O(n)](#on)
@@ -28,19 +37,33 @@
     - [3 Pillars Of Programming](#3-pillars-of-programming)
     - [Space Complexity](#space-complexity)
     - [Exercise: Space Complexity](#exercise-space-complexity)
+    </details>
   - [**Section 4: How To Solve Coding Problems**](#section-4-how-to-solve-coding-problems)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [What Are Companies Looking For?](#what-are-companies-looking-for)
     - [What We Need For Coding Interviews](#what-we-need-for-coding-interviews)
     - [Exercise: Interview Question](#exercise-interview-question)
     - [Review Google Interview](#review-google-interview)
+    </details>
+
   - [**Section 5: Data Structures: Introduction**](#section-5-data-structures-introduction)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [How to choose the right Data Structure?](#how-to-choose-the-right-data-structure)
     - [Examples of Data Structures in real life](#examples-of-data-structures-in-real-life)
     - [What Is A Data Structure?](#what-is-a-data-structure)
     - [How Computers Store Data](#how-computers-store-data)
     - [Data Structures In Different Languages](#data-structures-in-different-languages)
     - [Operations On Data Structures](#operations-on-data-structures)
+    </details>
+
   - [**Section 6: Data Structures: Arrays**](#section-6-data-structures-arrays)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Arrays Introduction](#arrays-introduction)
     - [Static vs Dynamic Arrays](#static-vs-dynamic-arrays)
     - [Optional: Classes In Javascript](#optional-classes-in-javascript)
@@ -48,7 +71,12 @@
     - [Exercise: Reverse A String](#exercise-reverse-a-string)
     - [Exercise: Merge Sorted Arrays](#exercise-merge-sorted-arrays)
     - [Interview Questions: Arrays](#interview-questions-arrays)
+    </details>
+
   - [**Section 7: Data Structures: Hash Tables**](#section-7-data-structures-hash-tables)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Hash Tables Introduction](#hash-tables-introduction)
     - [Hash Function](#hash-function)
     - [Hash Collisions](#hash-collisions)
@@ -56,13 +84,23 @@
     - [Hash Tables VS Arrays](#hash-tables-vs-arrays)
     - [Exercise: First Recurring Character](#exercise-first-recurring-character)
     - [Hash Tables Review](#hash-tables-review)
+    </details>
+
   - [**Section 8: Data Structures: Linked Lists**](#section-8-data-structures-linked-lists)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Linked Lists Introduction](#linked-lists-introduction)
     - [What Is A Linked List?](#what-is-a-linked-list)
     - [Exercise: Why Linked Lists?](#exercise-why-linked-lists)
     - [Doubly Linked Lists](#doubly-linked-lists)
     - [Linked Lists Review](#linked-lists-review)
+    </details>
+
   - [**Section 9: Data Structures: Stacks + Queues**](#section-9-data-structures-stacks--queues)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Stacks + Queues Introduction](#stacks--queues-introduction)
     - [Stacks](#stacks)
     - [Queues](#queues)
@@ -73,7 +111,12 @@
     - [Exercise: Queue Implementation (Array)](#exercise-queue-implementation-array)
     - [Queues Using Stacks](#queues-using-stacks)
     - [Stacks + Queues Review](#stacks--queues-review)
+    </details>
+
   - [**Section 10: Data Structures: Trees**](#section-10-data-structures-trees)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Trees Introduction](#trees-introduction)
     - [Binary Trees](#binary-trees)
     - [Balanced VS Unbalanced BST](#balanced-vs-unbalanced-bst)
@@ -82,12 +125,22 @@
     - [AVL Trees vs Red Black Trees](#avl-trees-vs-red-black-trees)
     - [Binary Heaps](#binary-heaps)
     - [Trie](#trie)
+    </details>
+
   - [**Section 11: Data Structures: Graphs**](#section-11-data-structures-graphs)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Types Of Graphs](#types-of-graphs)
     - [Exercise: Graph Implementation](#exercise-graph-implementation)
     - [Graphs Review](#graphs-review)
     - [Data Structures Review](#data-structures-review)
+    </details>
+
   - [**Section 12: Algorithms: Recursion**](#section-12-algorithms-recursion)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Introduction to Algorithms](#introduction-to-algorithms)
     - [Stack Overflow](#stack-overflow)
     - [Anatomy Of Recursion](#anatomy-of-recursion)
@@ -97,7 +150,12 @@
     - [When To Use Recursion](#when-to-use-recursion)
     - [Exercise: Reverse String With Recursion](#exercise-reverse-string-with-recursion)
     - [Recursion Review](#recursion-review)
+    </details>
+
   - [**Section 13: Algorithms: Sorting**](#section-13-algorithms-sorting)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Sorting Introduction](#sorting-introduction)
     - [The Issue With sort()](#the-issue-with-sort)
     - [Sorting Algorithms](#sorting-algorithms)
@@ -112,7 +170,12 @@
     - [Heap Sort](#heap-sort)
     - [Radix Sort + Counting Sort](#radix-sort--counting-sort)
     - [Sorting Interview](#sorting-interview)
+    </details>
+
   - [**Section 14: Algorithms: Searching + BFS + DFS**](#section-14-algorithms-searching--bfs--dfs)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Searching + Traversal Introduction](#searching--traversal-introduction)
     - [Linear Search](#linear-search)
     - [Binary Search](#binary-search)
@@ -123,13 +186,23 @@
     - [Exercise: Validate A BST](#exercise-validate-a-bst)
     - [Graph Traversals](#graph-traversals)
     - [Dijkstra + Bellman-Ford Algorithms](#dijkstra--bellman-ford-algorithms)
+    </details>
+
   - [**Section 15: Algorithms: Dynamic Programming**](#section-15-algorithms-dynamic-programming)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Dynamic Programming Introduction](#dynamic-programming-introduction)
     - [Memoization](#memoization)
     - [Memoization](#memoization-1)
     - [Fibonacci and Dynamic Programming](#fibonacci-and-dynamic-programming)
     - [Interview Questions: Dynamic Programming](#interview-questions-dynamic-programming)
+    </details>
+
   - [**Section 16: Non Technical Interviews**](#section-16-non-technical-interviews)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Section Overview](#section-overview)
     - [During The Interview](#during-the-interview)
     - [Tell Me About Yourself (1 min)](#tell-me-about-yourself-1-min)
@@ -140,12 +213,19 @@
     - [Secret Weapon](#secret-weapon)
     - [After The Interview](#after-the-interview)
     - [Section Summary](#section-summary)
+    </details>
+
   - [**Section 17: Offer + Negotiation**](#section-17-offer--negotiation)
+    <details>
+    <summary>Click to expand!</summary>
+
     - [Negotiation 101](#negotiation-101)
     - [Handling An Offer](#handling-an-offer)
     - [Handling Multiple Offers](#handling-multiple-offers)
     - [Getting A Raise](#getting-a-raise)
     - [Negotiation Master](#negotiation-master)
+    </details>
+
   - [**Section 19: Extras: Google, Amazon, Facebook Interview Questions**](#section-19-extras-google-amazon-facebook-interview-questions)
 
 ## **Section 1: Introduction**
