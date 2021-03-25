@@ -4,6 +4,7 @@
 
 - [Master the Coding Interview: Data Structures + Algorithms](#master-the-coding-interview-data-structures--algorithms)
   - [Table of contents](#table-of-contents)
+  - [**Section 0: Path**](#path)
   - [**Section 1: Introduction**](#section-1-introduction)
   - [**Section 2: Getting More Interviews**](#section-2-getting-more-interviews)
     - [Resume](#resume)
@@ -147,6 +148,10 @@
     - [Getting A Raise](#getting-a-raise)
     - [Negotiation Master](#negotiation-master)
   - [**Section 19: Extras: Google, Amazon, Facebook Interview Questions**](#section-19-extras-google-amazon-facebook-interview-questions)
+
+## **Section 0: Path**
+
+![](path.svg)
 
 ## **Section 1: Introduction**
 
