@@ -1055,10 +1055,7 @@ console.log(hasPairWithSum([], totalSum));
 console.log(hasPairWithSum(array2, undefined));
 ```
 
-// 14. Finally talk to the interviewer where you would improve the code. Does it work? Are there
-// different approaches? Is it readable? What would you google to improve? How can
-// performance be improved? Possibly: Ask the interviewer what was the most interesting
-// solution you have seen to this problem
+14. Finally talk to the interviewer where you would improve the code. Does it work? Are there different approaches? Is it readable? What would you google to improve? How can performance be improved? Possibly: Ask the interviewer what was the most interesting solution you have seen to this problem
 
 ```javascript
 const array = [6, 4, 3, 2, 7, 1];
@@ -1067,13 +1064,7 @@ const totalSum = 9;
 const result = array.some((item) => array.includes(totalSum - item));
 ```
 
-// 15. If your interviewer is happy with the solution, the interview usually ends here. It is also
-// common that the interviewer asks you extension questions, such as how you would handle the
-// problem if the whole input is too large to fit into memory, or if the input arrives as a stream.
-// This is a common follow-up question at Google, where they care a lot about scale. The answer
-// is usually a divide-and-conquer approach — perform distributed processing of the data and only
-// read certain chunks of the input from disk into memory, write the output back to disk and
-// combine them later.
+15. If your interviewer is happy with the solution, the interview usually ends here. It is also common that the interviewer asks you extension questions, such as how you would handle the problem if the whole input is too large to fit into memory, or if the input arrives as a stream. This is a common follow-up question at Google, where they care a lot about scale. The answer is usually a divide-and-conquer approach — perform distributed processing of the data and only read certain chunks of the input from disk into memory, write the output back to disk and combine them later.
 
 **[⬆ back to top](#table-of-contents)**
 
