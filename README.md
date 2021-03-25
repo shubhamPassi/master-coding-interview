@@ -830,7 +830,7 @@ containsCommonItem3(array1, array2)
 
 ### Review Google Interview
 
-Exercise: Go step by step through a problem use cheatsheet for that and approach this code as we do above.
+**Exercise** : Go step by step through a problem use cheatsheet for that and approach this code as we do above.
 
 ```javascript
 // Naive Approach
@@ -864,7 +864,7 @@ hasPairWithSum2([1, 2, 3, 9], 8);
 hasPairWithSum2([1, 2, 4, 4], 8);
 ```
 
-Solution:
+**Solution:**
 
 1. When the interviewer says the question, write down the key points at the top (i.e. sorted
    array). Make sure you have all the details. Show how organized you are.
