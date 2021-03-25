@@ -153,6 +153,8 @@
 
 ![](path.svg)
 
+**[⬆ back to top](#table-of-contents)**
+
 ## **Section 1: Introduction**
 
 [Interview Mind Map](https://coggle.it/diagram/W5u8QkZs6r4sZM3J/t/master-the-interview)
