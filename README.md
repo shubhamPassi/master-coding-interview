@@ -286,34 +286,34 @@ Big O
 
 ```javascript
 // O(n): Linear time
-const fish = ['dory', 'bruce', 'marlin', 'nemo']
-const nemo = ['nemo']
+const fish = ["dory", "bruce", "marlin", "nemo"];
+const nemo = ["nemo"];
 const everyone = [
-  'dory',
-  'bruce',
-  'marlin',
-  'nemo',
-  'gill',
-  'bloat',
-  'nigel',
-  'squirt',
-  'darla',
-  'hank',
-]
-const large = new Array(100000).fill('nemo')
+  "dory",
+  "bruce",
+  "marlin",
+  "nemo",
+  "gill",
+  "bloat",
+  "nigel",
+  "squirt",
+  "darla",
+  "hank",
+];
+const large = new Array(100000).fill("nemo");
 
 const findNemo = (fish) => {
-  let t0 = performance.now()
+  let t0 = performance.now();
   for (let i = 0; i < fish.length; i++) {
-    if (fish[i] === 'nemo') {
-      console.log('Found NEMO!')
+    if (fish[i] === "nemo") {
+      console.log("Found NEMO!");
     }
   }
-  let t1 = performance.now()
-  console.log('Call to find Nemo took ' + (t1 - t0) + ' milliseconds.')
-}
+  let t1 = performance.now();
+  console.log("Call to find Nemo took " + (t1 - t0) + " milliseconds.");
+};
 
-findNemo(large)
+findNemo(large);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -322,14 +322,14 @@ findNemo(large)
 
 ```javascript
 // O(1): Constant time
-const boxes = [0, 1, 2, 3, 4, 5]
+const boxes = [0, 1, 2, 3, 4, 5];
 
 const logFirstTwoBoxes = (boxes) => {
-  console.log(boxes[0])	// O(1)
-  console.log(boxes[1])	// O(1)
-}
+  console.log(boxes[0]); // O(1)
+  console.log(boxes[1]); // O(1)
+};
 
-logFirstTwoBoxes(boxes) // O(2)
+logFirstTwoBoxes(boxes); // O(2)
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -340,21 +340,21 @@ logFirstTwoBoxes(boxes) // O(2)
 // What is the Big O of the below function?
 // Hint, you may want to go line by line
 const funChallenge = (input) => {
-  let a = 10 // O(1)
-  a = 50 + 3 // O(1)
+  let a = 10; // O(1)
+  a = 50 + 3; // O(1)
 
   for (let i = 0; i < input.length; i++) {
-    anotherFunction() // O(n)
-    let stranger = true // O(n)
-    a++ // O(n)
+    anotherFunction(); // O(n)
+    let stranger = true; // O(n)
+    a++; // O(n)
   }
-  return a // O(1)
-}
+  return a; // O(1)
+};
 
 // 1 + 1 + 1 + n + n + n
 // Big O(3 + 3n)
 // O(n)
-funChallenge()
+funChallenge();
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -362,27 +362,27 @@ funChallenge()
 ### Exercise: Big O Calculation 2
 
 ```javascript
-// What is the Big O of the below function? 
+// What is the Big O of the below function?
 // (Hint, you may want to go line by line)
 const anotherFunChallenge = (input) => {
-  let a = 5 //O(1)
-  let b = 10 //O(1)
-  let c = 50 //O(1)
+  let a = 5; //O(1)
+  let b = 10; //O(1)
+  let c = 50; //O(1)
   for (let i = 0; i < input; i++) {
-    let x = i + 1 //O(n)
-    let y = i + 2 //O(n)
-    let z = i + 3 //O(n)
+    let x = i + 1; //O(n)
+    let y = i + 2; //O(n)
+    let z = i + 3; //O(n)
   }
   for (let j = 0; j < input; j++) {
-    let p = j * 2 //O(n)
-    let q = j * 2 //O(n)
+    let p = j * 2; //O(n)
+    let q = j * 2; //O(n)
   }
-  let whoAmI = "I don't know" //O(1)
-}
+  let whoAmI = "I don't know"; //O(1)
+};
 
 // Big O(4 + 5n)
 // Big O(n)
-anotherFunChallenge(5)
+anotherFunChallenge(5);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -401,37 +401,38 @@ Rule Book
 ### Big O Rule 1 - Worst Case
 
 ```javascript
-// Worst Case: n
-const fish = ['dory', 'bruce', 'marlin', 'nemo']
-const nemo = ['nemo']
+const fish = ["dory", "bruce", "marlin", "nemo"];
+const nemo = ["nemo"];
 const everyone = [
-  'dory',
-  'bruce',
-  'marlin',
-  'nemo',
-  'gill',
-  'bloat',
-  'nigel',
-  'squirt',
-  'darla',
-  'hank',
-]
-const large = new Array(100000).fill('nemo')
+  "dory",
+  "bruce",
+  "marlin",
+  "nemo",
+  "gill",
+  "bloat",
+  "nigel",
+  "squirt",
+  "darla",
+  "hank",
+];
+const large = new Array(100000).fill("nemo");
 
 const findNemo = (fish) => {
-  let t0 = performance.now()
+  let t0 = performance.now();
   for (let i = 0; i < fish.length; i++) {
-    console.log('running')
-    if (fish[i] === 'nemo') {
-      console.log('Found NEMO!')
-      break
+    console.log("running");
+    if (fish[i] === "nemo") {
+      console.log("Found NEMO!");
+      break;
     }
   }
-  let t1 = performance.now()
-  console.log('Call to find Nemo took ' + (t1 - t0) + ' milliseconds.')
-}
+  let t1 = performance.now();
+  console.log("Call to find Nemo took " + (t1 - t0) + " milliseconds.");
+};
 
-findNemo(large)
+findNemo(large);
+
+// Worst Case: n
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -439,28 +440,29 @@ findNemo(large)
 ### Big O Rule 2 - Remove Constants
 
 ```javascript
-// Big O(1 + n/2 + 100)
-// Big O(n/2 + 101)
-// Big O(n/2)
-// Big O(n)
 const printFirstItemThenFirstHalfThenSayHi100Times = (items) => {
   // O(1)
-  console.log(items[0])
+  console.log(items[0]);
 
-  const middleIndex = Math.floor(items.length / 2)
-  const index = 0
+  const middleIndex = Math.floor(items.length / 2);
+  const index = 0;
 
   // O(n/2)
   while (index < middleIndex) {
-    console.log(items[index])
-    index++
+    console.log(items[index]);
+    index++;
   }
 
   // O(100)
   for (let i = 0; i < 100; i++) {
-    console.log('hi')
+    console.log("hi");
   }
-}
+};
+
+// Big O(1 + n/2 + 100)
+// Big O(n/2 + 101)
+// Big O(n/2)
+// Big O(n)
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -468,14 +470,15 @@ const printFirstItemThenFirstHalfThenSayHi100Times = (items) => {
 ### Big O Rule 3 - Different terms for inputs
 
 ```javascript
+const compressBoxesTwice = (boxes, boxes2) => {
+  boxes.forEach((box) => console.log(box)); // O(a)
+  boxes2.forEach((box) => console.log(box)); // O(b)
+};
+
+compressBoxesTwice([1, 2, 3], [4, 5]);
+
 // boxes, boxes2 are 2 different terms for inputs
 // Big O(a + b)
-const compressBoxesTwice = (boxes, boxes2) => {
-  boxes.forEach((box) => console.log(box)) // O(a)
-  boxes2.forEach((box) => console.log(box)) // O(b)
-}
-
-compressBoxesTwice([1, 2, 3], [4, 5])
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -483,19 +486,20 @@ compressBoxesTwice([1, 2, 3], [4, 5])
 ### O(n^2)
 
 ```javascript
-// Big O(a * b) - Quadratic Time
-const boxes = ['a', 'b', 'c', 'd', 'e']
+const boxes = ["a", "b", "c", "d", "e"];
 const logAllPairsOfArray = (array) => {
   for (let i = 0; i < array.length; i++) {
     // O(a)
     for (let j = 0; j < array.length; j++) {
       // O(b)
-      console.log(array[i], array[j])
+      console.log(array[i], array[j]);
     }
   }
-}
+};
 
-logAllPairsOfArray(boxes)
+logAllPairsOfArray(boxes);
+
+// Big O(a * b) - Quadratic Time
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -503,21 +507,22 @@ logAllPairsOfArray(boxes)
 ### Big O Rule 4 - Drop Non Dominants
 
 ```javascript
-// Big O(n + n^2)
-// Drop Non Dominants -> Big O(n^2)
 const printAllNumbersThenAllPairSums = (numbers) => {
   // O(n)
-  console.log('these are the numbers:')
-  numbers.forEach((number) => console.log(number))
+  console.log("these are the numbers:");
+  numbers.forEach((number) => console.log(number));
 
   // O(n^2)
-  console.log('and these are their sums:')
+  console.log("and these are their sums:");
   numbers.forEach((firstNumber) =>
     numbers.forEach((secondNumber) => console.log(firstNumber + secondNumber))
-  )
-}
+  );
+};
 
-printAllNumbersThenAllPairSums([1, 2, 3, 4, 5])
+printAllNumbersThenAllPairSums([1, 2, 3, 4, 5]);
+
+// Big O(n + n^2)
+// Drop Non Dominants -> Big O(n^2)
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -530,7 +535,15 @@ Data Structures + Algorithms = Programs
 
 ### O(n!)
 
-[Example of O(n!)?](https://stackoverflow.com/questions/3953244/example-of-on)
+There you go. This is probably the most trivial example of a function that runs in O(n!) time (where n is the argument to the function):
+
+```javascript
+void nFacRuntimeFunc(int n) {
+  for(int i=0; i<n; i++) {
+    nFacRuntimeFunc(n-1);
+  }
+}
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -564,24 +577,23 @@ What causes Space Complexity?
 
 ```javascript
 // Space complexity O(1)
-const boooo = n => {
-  // space allocation for i is O(1)
+const boooo = (n) => {
   for (let i = 0; i < n.length; i++) {
-    console.log('booooo');
+    // space allocation for i is O(1)
+    console.log("booooo");
   }
-}
-boooo([1, 2, 3, 4, 5])
+};
+boooo([1, 2, 3, 4, 5]);
 
 // Space complexity O(n)
-const arrayOfHiNTimes = n => {
-  // space allocation for Data Structures hiArray is O(n)
-  const hiArray = [];
+const arrayOfHiNTimes = (n) => {
+  const hiArray = []; // space allocation for Data Structures hiArray is O(n)
   for (let i = 0; i < n; i++) {
-    hiArray[i] = 'hi';
+    hiArray[i] = "hi";
   }
   return hiArray;
-}
-arrayOfHiNTimes(6)
+};
+arrayOfHiNTimes(6);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -618,7 +630,6 @@ arrayOfHiNTimes(6)
 | Linked Lists    | Tries           |
 | Stacks          | Graphs          |
 
-
 | Algorithms            |
 | --------------------- |
 | Recursion             |
@@ -637,17 +648,17 @@ Given 2 arrays, create a function that let's a user know (true/false) whether th
 ```javascript
 const array1 = ['a', 'b', 'c', 'x'];
 const array2 = ['z', 'y', 'i'];
-should return false.
+should return false;
 
 const array1 = ['a', 'b', 'c', 'x'];
 const array2 = ['z', 'y', 'x'];
-should return true.
+should return true;
 ```
 
 2. Make sure you double check: What are the inputs? What are the outputs?
 
 ```javascript
-What are the inputs? 
+What are the inputs?
 2 parameters - arrays
 
 What are the outputs?
@@ -664,19 +675,19 @@ return true or false
 5. Start with the naive/brute force approach. First thing that comes into mind. It shows that you’re able to think well and critically (you don't need to write this code, just speak about it).
 
 ```javascript
-const array1 = ['a', 'b', 'c', 'x'];
-const array2 = ['z', 'y', 'a'];
+const array1 = ["a", "b", "c", "x"];
+const array2 = ["z", "y", "a"];
 
 const containsCommonItem = (arr1, arr2) => {
-  for (let i=0; i < arr1.length; i++) {
-    for ( let j=0; j < arr2.length; j++) {
-      if(arr1[i] === arr2[j]) {
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
         return true;
       }
     }
   }
-  return false
-}
+  return false;
+};
 
 containsCommonItem(array1, array2);
 ```
@@ -696,7 +707,7 @@ Space Complexity - O(1)
 const array1 = ['a', 'b', 'c', 'x'];
 const array2 = ['z', 'y', 'a'];
 
-array1 = obj {
+array1 ==> obj { // we convert an array to an object
   a: true,
   b: true,
   c: true,
@@ -708,65 +719,65 @@ array2[index] === obj.properties
 9.  Modularize your code from the very beginning. Break up your code into beautiful small pieces and add just comments if you need to.
 
 ```javascript
-const array1 = ['a', 'b', 'c', 'x'];
-const array2 = ['z', 'y', 'a'];
+const array1 = ["a", "b", "c", "x"];
+const array2 = ["z", "y", "a"];
 const containsCommonItem2 = (arr1, arr2) => {
   // loop through first array and create object where properties === items in the array
   // can we assume always 2 params?
   let map = {};
-  for (let i=0; i < arr1.length; i++) {
-    if(!map[arr1[i]]) {
+  for (let i = 0; i < arr1.length; i++) {
+    if (!map[arr1[i]]) {
       const item = arr1[i];
       map[item] = true;
     }
   }
 
-  // loop through second array and check if item in second array exists on created object. 
-  for (let j=0; j < arr2.length; j++) {
+  // loop through second array and check if item in second array exists on created object.
+  for (let j = 0; j < arr2.length; j++) {
     if (map[arr2[j]]) {
       return true;
     }
   }
-  return false
-}
+  return false;
+};
 
-containsCommonItem2(array1, array2)
+containsCommonItem2(array1, array2);
 
-// Time Complexity: O(a + b) 
+// Time Complexity: O(a + b)
 // Space Complexity: O(a)
 ```
 
 10. Start actually writing your code now. Keep in mind that the more you prepare and understand what you need to code, the better the whiteboard will go. So never start a whiteboard interview not being sure of how things are going to work out. That is a recipe for disaster. Keep in mind: A lot of interviews ask questions that you won’t be able to fully answer on time. So think: What can I show in order to show that I can do this and I am better than other coders. Break things up in Functions (if you can’t remember a method, just make up a function and you will at least have it there. Write something, and start with the easy part.
 
 ```javascript
-const array1 = ['a', 'b', 'c', 'x'];
-const array2 = ['z', 'y', 'a'];
-const arrToMap = arr1 => {
+const array1 = ["a", "b", "c", "x"];
+const array2 = ["z", "y", "a"];
+const arrToMap = (arr1) => {
   const map = {};
-  for (let i=0; i < arr1.length; i++) {
-    if(!map[arr1[i]]) {
+  for (let i = 0; i < arr1.length; i++) {
+    if (!map[arr1[i]]) {
       const item = arr1[i];
       map[item] = true;
     }
   }
   return map;
-}
+};
 
 const arrInMap = (map, arr2) => {
-  for (let j=0; j < arr2.length; j++) {
+  for (let j = 0; j < arr2.length; j++) {
     if (map[arr2[j]]) {
       return true;
     }
   }
-  return false
-}
+  return false;
+};
 
 const containsCommonItem2 = (arr1, arr2) => {
   const map = arrToMap(arr1);
-  return arrInMap(map,arr2);
-}
+  return arrInMap(map, arr2);
+};
 
-containsCommonItem2(array1, array2)
+containsCommonItem2(array1, array2);
 ```
 
 11. Think about error checks and how you can break this code. Never make assumptions about the input. Assume people are trying to break your code and that Darth Vader is using your function. How will you safeguard it? Always check for false inputs that you don’t want. Here is a trick: Comment in the code, the checks that you want to do… write the function, then tell the interviewer that you would write tests now to make your function fail (but you won't need to actually write the tests).
@@ -778,36 +789,36 @@ containsCommonItem2(array1, array2)
 ```javascript
 const arrToMap = (arr1 = []) => {
   const map = {};
-  for (let i=0; i < arr1.length; i++) {
-    if(!map[arr1[i]]) {
+  for (let i = 0; i < arr1.length; i++) {
+    if (!map[arr1[i]]) {
       const item = arr1[i];
       map[item] = true;
     }
   }
   return map;
-}
+};
 
 const arrInMap = (map, arr2) => {
-  for (let j=0; j < arr2.length; j++) {
+  for (let j = 0; j < arr2.length; j++) {
     if (map[arr2[j]]) {
       return true;
     }
   }
-  return false
-}
+  return false;
+};
 
 const containsCommonItem2 = (arr1 = [], arr2 = []) => {
   const map = arrToMap(arr1);
-  return arrInMap(map,arr2);
-}
+  return arrInMap(map, arr2);
+};
 
-containsCommonItem2()
+containsCommonItem2();
 ```
 
-14.  Finally talk to the interviewer where you would improve the code. Does it work? Are there different approaches? Is it readable? What would you google to improve? How can performance be improved? Possibly: Ask the interviewer what was the most interesting solution you have seen to this problem
+14. Finally talk to the interviewer where you would improve the code. Does it work? Are there different approaches? Is it readable? What would you google to improve? How can performance be improved? Possibly: Ask the interviewer what was the most interesting solution you have seen to this problem
 
 ```javascript
-const containsCommonItem3 = (arr1, arr2) 
+const containsCommonItem3 = (arr1, arr2)
   => arr1.some(item => arr2.includes(item))
 
 containsCommonItem3(array1, array2)
@@ -819,41 +830,250 @@ containsCommonItem3(array1, array2)
 
 ### Review Google Interview
 
-```javascript
-// [1, 2, 3, 9] Sum = 8, No
-// [1, 2, 4, 4] Sum = 8, Yes
+Exercise: Go step by step through a problem use cheatsheet for that and approach this code as we do above.
 
+```javascript
 // Naive Approach
 const hasPairWithSum = (arr, sum) => {
   const len = arr.length;
-  for(let i =0; i<len-1; i++){
-     for(let j = i+1;j<len; j++){
-        if (arr[i] + arr[j] === sum)
-            return true;
-     }
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = i + 1; j < len; j++) {
+      if (arr[i] + arr[j] === sum) return true;
+    }
   }
   return false;
-}
+};
 
-hasPairWithSum([1, 2, 3, 9], 8)
-hasPairWithSum([1, 2, 4, 4], 8)
+hasPairWithSum([1, 2, 3, 9], 8);
+hasPairWithSum([1, 2, 4, 4], 8);
 
 // Better Approach
 const hasPairWithSum2 = (arr, sum) => {
   const mySet = new Set();
   const len = arr.length;
-  for (let i = 0; i < len; i++){
+  for (let i = 0; i < len; i++) {
     if (mySet.has(arr[i])) {
       return true;
     }
     mySet.add(sum - arr[i]);
   }
   return false;
-}
+};
 
-hasPairWithSum2([1, 2, 3, 9], 8)
-hasPairWithSum2([1, 2, 4, 4], 8)
+hasPairWithSum2([1, 2, 3, 9], 8);
+hasPairWithSum2([1, 2, 4, 4], 8);
 ```
+
+Solution:
+
+1. When the interviewer says the question, write down the key points at the top (i.e. sorted
+   array). Make sure you have all the details. Show how organized you are.
+
+```javascript
+const array = [6, 4, 1, 2, 7, 3];
+const totalSum = 9;
+return true;
+
+const array = [6, 4, 1, 2, 12, 3];
+const totalSum = 11;
+return false;
+```
+
+2. Make sure you double check: What are the inputs? What are the outputs?
+
+```javascript
+what is the input?
+2 parameters - array , number
+
+what is the output?
+return true or false
+```
+
+3. What is the most important value of the problem? Do you have time, and space and memory,
+   etc.. What is the main goal?
+
+```javascript
+2 parameters - array , number - no size limits
+```
+
+4. Don't be annoying and ask too many questions.
+
+5. Start with the naive/brute force approach. First thing that comes into mind. It shows that
+   you’re able to think well and critically (you don't need to write this code, just speak about it).
+
+```javascript
+const array = [6, 4, 1, 2, 7, 3];
+const totalSum = 9;
+
+const array2 = [6, 4, 1, 2, 12, 3];
+const totalSum2 = 11;
+
+const hasPairWithSum = (array, sum) => {
+  const length = array.length;
+
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === sum) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+console.log(hasPairWithSum(array, totalSum));
+console.log(hasPairWithSum(array2, totalSum2));
+```
+
+6. Tell them why this approach is not the best (i.e. O(n^2) or higher, not readable, etc...)
+
+```javascript
+Time Complexcity - O(a*b)
+Space Complexcity - O(1)
+```
+
+7. Walk through your approach, comment things and see where you may be able to break things.
+   Any repetition, bottlenecks like O(N^2), or unnecessary work? Did you use all the information
+   the interviewer gave you? Bottleneck is the part of the code with the biggest Big O. Focus on
+   that. Sometimes this occurs with repeated work as well.
+
+8. Before you start coding, walk through your code and write down the steps you are going to
+   follow.
+
+```javascript
+const array = [6, 4, 3, 2, 7, 1];
+const totalSum = 9;
+
+const mySet= new Set();
+
+for (let i = 0; i < array.length; i++) {
+  if (mySet.has(array[i])) {
+    return true;
+  }
+  mySet.add(sum - array[i]);
+}
+return false;
+
+Time Complexcity - O(a)
+Space complexcity - O(a)
+```
+
+9. Modularize your code from the very beginning. Break up your code into beautiful small pieces
+   and add just comments if you need to.
+
+```javascript
+const array = [6, 4, 3, 2, 7, 1];
+const totalSum = 9;
+
+const array2 = [6, 4, 1, 2, 12, 3];
+const totalSum2 = 11;
+
+const hasPairWithSum = (arr, sum) => {
+  // loops through each each element in the array and create Set where if Set.has === array.element return true
+  // if false then Set.add = array.element
+  const mySet = new Set();
+  const len = arr.length;
+  for (let i = 0; i < len; i++) {
+    if (mySet.has(arr[i])) {
+      return true;
+    }
+    mySet.add(sum - arr[i]);
+  }
+  return false;
+};
+
+console.log(hasPairWithSum(array, totalSum));
+console.log(hasPairWithSum(array2, totalSum2));
+```
+
+10. Start actually writing your code now. Keep in mind that the more you prepare and understand
+    what you need to code, the better the whiteboard will go. So never start a whiteboard
+    interview not being sure of how things are going to work out. That is a recipe for disaster.
+    Keep in mind: A lot of interviews ask questions that you won’t be able to fully answer on time.
+    So think: What can I show in order to show that I can do this and I am better than other
+    coders. Break things up in Functions (if you can’t remember a method, just make up a function
+    and you will at least have it there. Write something, and start with the easy part.
+
+```javascript
+const array = [6, 4, 3, 2, 7, 1];
+const totalSum = 9;
+
+const array2 = [6, 4, 1, 2, 12, 3];
+const totalSum2 = 11;
+
+const hasPairWithSum = (arr, sum) => {
+  // loops through each each element in the array and create Set where if Set.has === array.element return true
+  // if false then Set.add = array.element
+  const mySet = new Set();
+  const len = arr.length;
+  for (let i = 0; i < len; i++) {
+    if (mySet.has(arr[i])) {
+      return true;
+    }
+    mySet.add(sum - arr[i]);
+  }
+  return false;
+};
+
+console.log(hasPairWithSum(array, totalSum));
+console.log(hasPairWithSum(array2, totalSum2));
+
+// It can't be breaked in mode smaller module because it is already a small pieces of code or module.
+```
+
+11. Think about error checks and how you can break this code. Never make assumptions about the
+    input. Assume people are trying to break your code and that Darth Vader is using your
+    function. How will you safeguard it? Always check for false inputs that you don’t want. Here is
+    a trick: Comment in the code, the checks that you want to do… write the function, then tell the
+    interviewer that you would write tests now to make your function fail (but you won't need to
+    actually write the tests).
+
+12. Don’t use bad/confusing names like i and j. Write code that reads well.
+
+13. Test your code: Check for no params, 0, undefined, null, massive arrays, async code, etc… Ask
+    the interviewer if we can make assumption about the code. Can you make the answer return
+    an error? Poke holes into your solution. Are you repeating yourself?
+
+```javascript
+const totalSum = 9;
+
+const array2 = [6, 4, 1, 2, 12, 3];
+
+const hasPairWithSum = (arr, sum) => {
+  const mySet = new Set();
+  const len = arr.length;
+  for (let i = 0; i < len; i++) {
+    if (mySet.has(arr[i])) {
+      return true;
+    }
+    mySet.add(sum - arr[i]);
+  }
+  return false;
+};
+
+console.log(hasPairWithSum([], totalSum));
+console.log(hasPairWithSum(array2, undefined));
+```
+
+// 14. Finally talk to the interviewer where you would improve the code. Does it work? Are there
+// different approaches? Is it readable? What would you google to improve? How can
+// performance be improved? Possibly: Ask the interviewer what was the most interesting
+// solution you have seen to this problem
+
+```javascript
+const array = [6, 4, 3, 2, 7, 1];
+const totalSum = 9;
+
+const result = array.some((item) => array.includes(totalSum - item));
+```
+
+// 15. If your interviewer is happy with the solution, the interview usually ends here. It is also
+// common that the interviewer asks you extension questions, such as how you would handle the
+// problem if the whole input is too large to fit into memory, or if the input arrives as a stream.
+// This is a common follow-up question at Google, where they care a lot about scale. The answer
+// is usually a divide-and-conquer approach — perform distributed processing of the data and only
+// read certain chunks of the input from disk into memory, write the output back to disk and
+// combine them later.
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -944,38 +1164,38 @@ Array
 
 ```javascript
 // 4 * 4 = 16 bytes of storage
-const strings = ['a', 'b', 'c', 'd'];
-strings[2]
+const strings = ["a", "b", "c", "d"];
+strings[2];
 
 const numbers = [1, 2, 3, 4, 5];
 
 //push
-strings.push('e');  // O(1)
+strings.push("e"); // O(1)
 
 //pop
-strings.pop();  // O(1)
-strings.pop();  // O(1)
+strings.pop(); // O(1)
+strings.pop(); // O(1)
 
 //unshift
 // 'x' will push all elements to their right
 // ['x', 'a', 'b', 'c', 'd'];
 //   0    1    2    3    4
-strings.unshift('x')  // O(n)
+strings.unshift("x"); // O(n)
 
 //splice
-strings.splice(2, 0, 'alien');  // O(n)
+strings.splice(2, 0, "alien"); // O(n)
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
 ### Static vs Dynamic Arrays
 
-JavaScript Array is dynamic 
+JavaScript Array is dynamic
 
 | Array Operation | Big O | Dynamic Array | Big O        |
 | --------------- | ----- | ------------- | ------------ |
 | lookup          | O(1)  | lookup        | O(1)         |
-| push            | O(1)  | append*       | O(1) or O(n) |
+| push            | O(1)  | append\*      | O(1) or O(n) |
 | insert          | O(n)  | insert        | O(n)         |
 | delete          | O(n)  | delete        | O(n)         |
 
@@ -994,7 +1214,7 @@ class Hero {
   }
   greet = () => {
     return `${this.name} says hello.`;
-  }
+  };
 }
 
 class Mage extends Hero {
@@ -1003,13 +1223,13 @@ class Mage extends Hero {
     this.spell = spell;
   }
   greet() {
-    super.greet()
+    super.greet();
   }
 }
 
-const hero1 = new Hero('Varg', 1);
-const hero2 = new Mage('Lejon', 2, 'Magic Missile');
-hero2.greet()
+const hero1 = new Hero("Varg", 1);
+const hero2 = new Mage("Lejon", 2, "Magic Missile");
+hero2.greet();
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1023,31 +1243,31 @@ class MyArray {
     this.data = {};
   }
   get(index) {
-    return this.data[index];  // O(1)
+    return this.data[index]; // O(1)
   }
 
-  push(item) {  
-    this.data[this.length] = item;  // O(1)
+  push(item) {
+    this.data[this.length] = item; // O(1)
     this.length++;
     return this.data;
   }
-  
+
   pop() {
-    const lastItem = this.data[this.length - 1];  // O(1)
+    const lastItem = this.data[this.length - 1]; // O(1)
     delete this.data[this.length - 1];
     this.length--;
     return lastItem;
   }
-  
+
   deleteAtIndex(index) {
     const item = this.data[index];
     this.shiftItems(index); // O(n)
     return item;
   }
-  
+
   shiftItems(index) {
-    for (let i = index; i < this.length - 1; i++) { 
-      this.data[i] = this.data[i + 1];  // O(n)
+    for (let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i + 1]; // O(n)
     }
     delete this.data[this.length - 1];
     this.length--;
@@ -1055,38 +1275,39 @@ class MyArray {
 }
 
 const myArray = new MyArray();
-myArray.push('hi');
-myArray.push('you');
-myArray.push('!');
+myArray.push("hi");
+myArray.push("you");
+myArray.push("!");
 myArray.get(0);
 myArray.pop();
 myArray.deleteAtIndex(0);
-myArray.push('are');
-myArray.push('nice');
+myArray.push("are");
+myArray.push("nice");
 myArray.shiftItems(0);
 ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ### Exercise: Reverse A String
 
 ```javascript
-const reverse1 = (str = '') => {
-  if(!str || typeof str != 'string' || str.length < 2 ) return str;
-  
+const reverse1 = (str = "") => {
+  if (!str || typeof str != "string" || str.length < 2) return str;
+
   const backwards = [];
   const totalItems = str.length - 1;
-  for(let i = totalItems; i >= 0; i--){
+  for (let i = totalItems; i >= 0; i--) {
     backwards.push(str[i]);
   }
-  return backwards.join('');
-}
+  return backwards.join("");
+};
 
-const reverse2 = (str = '') => str.split('').reverse().join('');
-const reverse3 = (str = '') => [...str].reverse().join('');
+const reverse2 = (str = "") => str.split("").reverse().join("");
+const reverse3 = (str = "") => [...str].reverse().join("");
 
-reverse1('Timbits Hi')
-reverse2('Timbits Hi')
-reverse3('Timbits Hi')
+reverse1("Timbits Hi");
+reverse2("Timbits Hi");
+reverse3("Timbits Hi");
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1098,7 +1319,7 @@ const ascendingSort = (a, b) => a - b;
 const descendingSort = (a, b) => b - a;
 
 const mergeSortedArrays = (arr1, arr2) => arr1.concat(arr2).sort(ascendingSort);
-mergeSortedArrays([0,3,4,31], [3,4,6,30]);
+mergeSortedArrays([0, 3, 4, 31], [3, 4, 6, 30]);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1119,14 +1340,14 @@ mergeSortedArrays([0,3,4,31], [3,4,6,30]);
 const twoSum = (nums, target) => {
   let low = 0;
   let high = nums.length - 1;
-  while(low < high) {
-    if(nums[low] + nums[high] === target) return [low, high];
-    else if(nums[low] + nums[high] > target) high--;
+  while (low < high) {
+    if (nums[low] + nums[high] === target) return [low, high];
+    else if (nums[low] + nums[high] > target) high--;
     else low++;
   }
 };
 
-twoSum([2, 3, 4, 5, 6], 10)
+twoSum([2, 3, 4, 5, 6], 10);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1180,15 +1401,15 @@ The clerk only had to inspect three letters. How many letters would he have to i
 
 ```javascript
 class HashTable {
-  constructor(size){
+  constructor(size) {
     this.data = new Array(size);
     // this.data = [];
   }
 
   _hash(key) {
     let hash = 0;
-    for (let i =0; i < key.length; i++){
-        hash = (hash + key.charCodeAt(i) * i) % this.data.length
+    for (let i = 0; i < key.length; i++) {
+      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
     }
     return hash;
   }
@@ -1204,25 +1425,25 @@ class HashTable {
 
   get(key) {
     const address = this._hash(key);
-    const currentBucket = this.data[address]
-    return currentBucket 
-      ? currentBucket.find(item => item[0] === key)[1] 
-      : undefined
+    const currentBucket = this.data[address];
+    return currentBucket
+      ? currentBucket.find((item) => item[0] === key)[1]
+      : undefined;
   }
 
   keys() {
-    return this.data.filter(item => !!item).map(item => item[0][0]);
+    return this.data.filter((item) => !!item).map((item) => item[0][0]);
   }
 }
 
 const myHashTable = new HashTable(50);
-myHashTable.set('grapes', 10000)
-myHashTable.get('grapes')
-myHashTable.set('oranges', 54)
-myHashTable.get('oranges')
-myHashTable.set('apples', 9)
-myHashTable.get('apples')
-myHashTable.keys()
+myHashTable.set("grapes", 10000);
+myHashTable.get("grapes");
+myHashTable.set("oranges", 54);
+myHashTable.get("oranges");
+myHashTable.set("apples", 9);
+myHashTable.get("apples");
+myHashTable.keys();
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1235,7 +1456,7 @@ Arrays
 | --------- | ----- |
 | search    | O(n)  |
 | lookup    | O(1)  |
-| push*     | O(1)  |
+| push\*    | O(1)  |
 | insert    | O(n)  |
 | delete    | O(n)  |
 
@@ -1267,64 +1488,64 @@ Hash Tables
 // [2,5,5,2,3,5,1,2,4]
 // return 5 because the pairs are before 2,2
 
-const firstRecurringCharacter1 = input => {
-  const map = []
+const firstRecurringCharacter1 = (input) => {
+  const map = [];
   for (let i = 0; i < input.length; i++) {
-    const foundItem = map.find(item => item === input[i]);
-    if(!!foundItem) return input[i]; 
+    const foundItem = map.find((item) => item === input[i]);
+    if (!!foundItem) return input[i];
     else map.push(input[i]);
   }
   return undefined;
-}
+};
 
-firstRecurringCharacter1([2,5,1,2,3,5,1,2,4])
-firstRecurringCharacter1([2,1,1,2,3,5,1,2,4])
-firstRecurringCharacter1([2,3,4,5])
-firstRecurringCharacter1([2,5,5,2,3,5,1,2,4])
+firstRecurringCharacter1([2, 5, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter1([2, 1, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter1([2, 3, 4, 5]);
+firstRecurringCharacter1([2, 5, 5, 2, 3, 5, 1, 2, 4]);
 
-const firstRecurringCharacter2 = input => {
-  const mySet = new Set()
+const firstRecurringCharacter2 = (input) => {
+  const mySet = new Set();
   for (let i = 0; i < input.length; i++) {
     const isFound = mySet.has(input[i]);
-    if(isFound) return input[i]; 
+    if (isFound) return input[i];
     else mySet.add(input[i]);
   }
   return undefined;
-}
+};
 
-firstRecurringCharacter2([2,5,1,2,3,5,1,2,4])
-firstRecurringCharacter2([2,1,1,2,3,5,1,2,4])
-firstRecurringCharacter2([2,3,4,5])
-firstRecurringCharacter2([2,5,5,2,3,5,1,2,4])
+firstRecurringCharacter2([2, 5, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter2([2, 1, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter2([2, 3, 4, 5]);
+firstRecurringCharacter2([2, 5, 5, 2, 3, 5, 1, 2, 4]);
 
-const firstRecurringCharacter3 = input => {
-  const myMap = new Map()
+const firstRecurringCharacter3 = (input) => {
+  const myMap = new Map();
   for (let i = 0; i < input.length; i++) {
-    const isFound = myMap.has(input[i]) 
-    if (isFound) return input[i]
-    else myMap.set(input[i], i)
+    const isFound = myMap.has(input[i]);
+    if (isFound) return input[i];
+    else myMap.set(input[i], i);
   }
   return undefined;
-}
+};
 
-firstRecurringCharacter3([2,5,1,2,3,5,1,2,4])
-firstRecurringCharacter3([2,1,1,2,3,5,1,2,4])
-firstRecurringCharacter3([2,3,4,5])
-firstRecurringCharacter3([2,5,5,2,3,5,1,2,4])
+firstRecurringCharacter3([2, 5, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter3([2, 1, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter3([2, 3, 4, 5]);
+firstRecurringCharacter3([2, 5, 5, 2, 3, 5, 1, 2, 4]);
 
-const firstRecurringCharacter4 = input => {
-  const hashtable = {}
+const firstRecurringCharacter4 = (input) => {
+  const hashtable = {};
   for (let item of input) {
-    if(!hashtable[item]) hashtable[item] = true
-    else return item; 
+    if (!hashtable[item]) hashtable[item] = true;
+    else return item;
   }
   return undefined;
-}
+};
 
-firstRecurringCharacter4([2,5,1,2,3,5,1,2,4])
-firstRecurringCharacter4([2,1,1,2,3,5,1,2,4])
-firstRecurringCharacter4([2,3,4,5])
-firstRecurringCharacter4([2,5,5,2,3,5,1,2,4])
+firstRecurringCharacter4([2, 5, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter4([2, 1, 1, 2, 3, 5, 1, 2, 4]);
+firstRecurringCharacter4([2, 3, 4, 5]);
+firstRecurringCharacter4([2, 5, 5, 2, 3, 5, 1, 2, 4]);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1335,10 +1556,10 @@ firstRecurringCharacter4([2,5,5,2,3,5,1,2,4])
 
 Pros
 
-- Fast lookups*
+- Fast lookups\*
 - Fast inserts
 - Flexible Keys
-*Good collision resolution needed
+  \*Good collision resolution needed
 
 Cons
 
@@ -1375,8 +1596,8 @@ linked list: apples --> grapes --> pears
 
 apples
 8947 --> grapes
-          8742 --> pears
-                    372 --> null
+8742 --> pears
+372 --> null
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1399,8 +1620,8 @@ Linked Lists
 ```javascript
 // Create the below linked list:
 // myLinkedList = {
-//   head: { value: 10, 
-//           next: { value: 5, 
+//   head: { value: 10,
+//           next: { value: 5,
 //                   next: { value: 16,
 //                           next: null
 //                         }
@@ -1437,18 +1658,18 @@ class LinkedList {
   printList() {
     const array = [];
     let currentNode = this.head;
-    while(currentNode !== null){
-        array.push(currentNode.value)
-        currentNode = currentNode.next
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
     }
     return array;
   }
-  insert(index, value){
-    if(index >= this.length) {
+  insert(index, value) {
+    if (index >= this.length) {
       return this.append(value);
     }
     const newNode = new Node(value);
-    const leader = this.traverseToIndex(index-1);
+    const leader = this.traverseToIndex(index - 1);
     const holdingPointer = leader.next;
     leader.next = newNode;
     newNode.next = holdingPointer;
@@ -1458,14 +1679,14 @@ class LinkedList {
   traverseToIndex(index) {
     let counter = 0;
     let currentNode = this.head;
-    while(counter !== index){
+    while (counter !== index) {
       currentNode = currentNode.next;
       counter++;
     }
     return currentNode;
   }
-  remove(index) {     
-    const leader = this.traverseToIndex(index-1);
+  remove(index) {
+    const leader = this.traverseToIndex(index - 1);
     const unwantedNode = leader.next;
     leader.next = unwantedNode.next;
     this.length--;
@@ -1474,7 +1695,7 @@ class LinkedList {
 }
 
 const myLinkedList = new LinkedList(10);
-myLinkedList
+myLinkedList;
 myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(1);
@@ -1482,6 +1703,7 @@ myLinkedList.insert(2, 99);
 myLinkedList.insert(20, 88);
 myLinkedList.remove(2);
 ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ### Doubly Linked Lists
@@ -1503,7 +1725,7 @@ class DoublyLinkedList {
   }
   append(value) {
     const newNode = new Node(value);
-    newNode.prev = this.tail
+    newNode.prev = this.tail;
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
@@ -1512,7 +1734,7 @@ class DoublyLinkedList {
   prepend(value) {
     const newNode = new Node(value);
     newNode.next = this.head;
-    this.head.prev = newNode
+    this.head.prev = newNode;
     this.head = newNode;
     this.length++;
     return this;
@@ -1520,40 +1742,40 @@ class DoublyLinkedList {
   printList() {
     const array = [];
     let currentNode = this.head;
-    while(currentNode !== null){
-      array.push(currentNode.value)
-      currentNode = currentNode.next
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
     }
     return array;
   }
-  insert(index, value){
-    if(index >= this.length) {
+  insert(index, value) {
+    if (index >= this.length) {
       return this.append(value);
     }
-    
+
     const newNode = new Node(value);
-    const leader = this.traverseToIndex(index-1);
+    const leader = this.traverseToIndex(index - 1);
     const follower = leader.next;
     leader.next = newNode;
     newNode.prev = leader;
     newNode.next = follower;
     follower.prev = newNode;
     this.length++;
-    console.log(this)
+    console.log(this);
     return this.printList();
   }
   traverseToIndex(index) {
     //Check parameters
     let counter = 0;
     let currentNode = this.head;
-    while(counter !== index){
+    while (counter !== index) {
       currentNode = currentNode.next;
       counter++;
     }
     return currentNode;
   }
-  remove(index) {  
-    const leader = this.traverseToIndex(index-1);
+  remove(index) {
+    const leader = this.traverseToIndex(index - 1);
     const unwantedNode = leader.next;
     leader.next = unwantedNode.next;
     this.length--;
@@ -1567,7 +1789,7 @@ class DoublyLinkedList {
     this.tail = this.head;
     let second = first.next;
 
-    while(second) {
+    while (second) {
       const temp = second.next;
       second.next = first;
       first = second;
@@ -1581,15 +1803,15 @@ class DoublyLinkedList {
 }
 
 const myLinkedList = new DoublyLinkedList(10);
-myLinkedList
-myLinkedList.append(5)
-myLinkedList.append(16)
-myLinkedList.prepend(1)
-myLinkedList.insert(2, 99)
-myLinkedList.insert(20, 88)
-myLinkedList.printList()
-myLinkedList.remove(2)
-myLinkedList.reverse()
+myLinkedList;
+myLinkedList.append(5);
+myLinkedList.append(16);
+myLinkedList.prepend(1);
+myLinkedList.insert(2, 99);
+myLinkedList.insert(20, 88);
+myLinkedList.printList();
+myLinkedList.remove(2);
+myLinkedList.reverse();
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1671,22 +1893,24 @@ Queues
 
 ```javascript
 class Node {
-  constructor(value){
+  constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
 
 class Stack {
-  constructor(){
+  constructor() {
     this.top = null;
     this.bottom = null;
     this.length = 0;
   }
-  peek() {  // O(1)
+  peek() {
+    // O(1)
     return this.top;
   }
-  push(value){  // O(1)
+  push(value) {
+    // O(1)
     const newNode = new Node(value);
     if (this.length === 0) {
       this.top = newNode;
@@ -1699,7 +1923,8 @@ class Stack {
     this.length++;
     return this;
   }
-  pop(){  // O(1)
+  pop() {
+    // O(1)
     if (!this.top) {
       return null;
     }
@@ -1715,9 +1940,9 @@ class Stack {
 
 const myStack = new Stack();
 myStack.peek();
-myStack.push('google');
-myStack.push('udemy');
-myStack.push('discord');
+myStack.push("google");
+myStack.push("udemy");
+myStack.push("discord");
 myStack.peek();
 myStack.pop();
 myStack.pop();
@@ -1730,17 +1955,18 @@ myStack.pop();
 
 ```javascript
 class Stack {
-  constructor(){
+  constructor() {
     this.array = [];
   }
-  peek() {  // O(1)
-    return this.array[this.array.length-1];
+  peek() {
+    // O(1)
+    return this.array[this.array.length - 1];
   }
-  push(value){
+  push(value) {
     this.array.push(value); // O(1)
     return this;
   }
-  pop(){
+  pop() {
     this.array.pop(); // O(1)
     return this;
   }
@@ -1748,9 +1974,9 @@ class Stack {
 
 const myStack = new Stack();
 myStack.peek();
-myStack.push('google');
-myStack.push('udemy');
-myStack.push('discord');
+myStack.push("google");
+myStack.push("udemy");
+myStack.push("discord");
 myStack.peek();
 myStack.pop();
 myStack.pop();
@@ -1770,15 +1996,17 @@ class Node {
 }
 
 class Queue {
-  constructor(){
+  constructor() {
     this.first = null;
     this.last = null;
     this.length = 0;
   }
-  peek() {  // O(1)
+  peek() {
+    // O(1)
     return this.first;
   }
-  enqueue(value){ // O(1)
+  enqueue(value) {
+    // O(1)
     const newNode = new Node(value);
     if (this.length === 0) {
       this.first = newNode;
@@ -1790,7 +2018,8 @@ class Queue {
     this.length++;
     return this;
   }
-  dequeue(){  // O(1)
+  dequeue() {
+    // O(1)
     if (!this.first) {
       return null;
     }
@@ -1806,9 +2035,9 @@ class Queue {
 
 const myQueue = new Queue();
 myQueue.peek();
-myQueue.enqueue('Joy');
-myQueue.enqueue('Matt');
-myQueue.enqueue('Pavel');
+myQueue.enqueue("Joy");
+myQueue.enqueue("Matt");
+myQueue.enqueue("Pavel");
 myQueue.peek();
 myQueue.dequeue();
 myQueue.dequeue();
@@ -1822,17 +2051,17 @@ myQueue.peek();
 
 ```javascript
 class Queue {
-  constructor(){
+  constructor() {
     this.array = [];
   }
   peek() {
     return this.array[0]; // O(1)
   }
-  enqueue(value){
+  enqueue(value) {
     this.array.push(value); // O(1)
     return this;
   }
-  dequeue(){
+  dequeue() {
     this.array.shift(); // O(n)
     return this;
   }
@@ -1840,9 +2069,9 @@ class Queue {
 
 const myQueue = new Queue();
 myQueue.peek();
-myQueue.enqueue('Joy');
-myQueue.enqueue('Matt');
-myQueue.enqueue('Pavel');
+myQueue.enqueue("Joy");
+myQueue.enqueue("Matt");
+myQueue.enqueue("Pavel");
 myQueue.peek();
 myQueue.dequeue();
 myQueue.dequeue();
@@ -1888,9 +2117,9 @@ class CrazyQueue {
 
 const myQueue = new CrazyQueue();
 myQueue.peek();
-myQueue.enqueue('Joy');
-myQueue.enqueue('Matt');
-myQueue.enqueue('Pavel');
+myQueue.enqueue("Joy");
+myQueue.enqueue("Matt");
+myQueue.enqueue("Pavel");
 myQueue.peek();
 myQueue.dequeue();
 myQueue.dequeue();
@@ -2229,52 +2458,52 @@ Real life example
 ### Exercise: Graph Implementation
 
 ```javascript
-class Graph { 
-  constructor() { 
-    this.numberOfNodes = 0; 
-    this.adjacentList = {}; 
-  } 
-  addVertex(node)  { 
-    this.adjacentList[node] = []; 
+class Graph {
+  constructor() {
+    this.numberOfNodes = 0;
+    this.adjacentList = {};
+  }
+  addVertex(node) {
+    this.adjacentList[node] = [];
     this.numberOfNodes++;
-  } 
-  addEdge(node1, node2) { 
-    //uniderected Graph 
-    this.adjacentList[node1].push(node2); 
-    this.adjacentList[node2].push(node1); 
-  } 
-  showConnections() { 
-    const allNodes = Object.keys(this.adjacentList); 
-    for (let node of allNodes) { 
-      let nodeConnections = this.adjacentList[node]; 
-      let connections = ""; 
+  }
+  addEdge(node1, node2) {
+    //uniderected Graph
+    this.adjacentList[node1].push(node2);
+    this.adjacentList[node2].push(node1);
+  }
+  showConnections() {
+    const allNodes = Object.keys(this.adjacentList);
+    for (let node of allNodes) {
+      let nodeConnections = this.adjacentList[node];
+      let connections = "";
       let vertex;
       for (vertex of nodeConnections) {
         connections += vertex + " ";
-      } 
-      console.log(node + "-->" + connections); 
-    } 
-  } 
-} 
+      }
+      console.log(node + "-->" + connections);
+    }
+  }
+}
 
 const myGraph = new Graph();
-myGraph.addVertex('0');
-myGraph.addVertex('1');
-myGraph.addVertex('2');
-myGraph.addVertex('3');
-myGraph.addVertex('4');
-myGraph.addVertex('5');
-myGraph.addVertex('6');
-myGraph.addEdge('3', '1'); 
-myGraph.addEdge('3', '4'); 
-myGraph.addEdge('4', '2'); 
-myGraph.addEdge('4', '5'); 
-myGraph.addEdge('1', '2'); 
-myGraph.addEdge('1', '0'); 
-myGraph.addEdge('0', '2'); 
-myGraph.addEdge('6', '5');
-myGraph
-myGraph.showConnections(); 
+myGraph.addVertex("0");
+myGraph.addVertex("1");
+myGraph.addVertex("2");
+myGraph.addVertex("3");
+myGraph.addVertex("4");
+myGraph.addVertex("5");
+myGraph.addVertex("6");
+myGraph.addEdge("3", "1");
+myGraph.addEdge("3", "4");
+myGraph.addEdge("4", "2");
+myGraph.addEdge("4", "5");
+myGraph.addEdge("1", "2");
+myGraph.addEdge("1", "0");
+myGraph.addEdge("0", "2");
+myGraph.addEdge("6", "5");
+myGraph;
+myGraph.showConnections();
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2297,7 +2526,6 @@ Con
 
 ![](data-structures-blocks.jpg)
 
-
 **[⬆ back to top](#table-of-contents)**
 
 ## **Section 12: Algorithms: Recursion**
@@ -2312,7 +2540,6 @@ Con
 | Hash tables     | Trees           |
 | Linked Lists    | Tries           |
 | Stacks          | Graphs          |
-
 
 | Algorithms            |
 | --------------------- |
@@ -2344,16 +2571,16 @@ function inception() {
 let counter = 0;
 
 const inception = () => {
-  console.log(counter)
+  console.log(counter);
   // base case
-  if(counter > 3) {
-    return 'done!';
+  if (counter > 3) {
+    return "done!";
   }
   counter++;
-  
+
   // recursive calls
   return inception();
-}
+};
 
 inception();
 ```
@@ -2365,20 +2592,21 @@ inception();
 ```javascript
 // Write two functions that finds the factorial of any number. One should use recursive, the other should just use a for loop
 
-const findFactorialRecursive = number => {  // O(n)
-  if(number <= 2) return number;
+const findFactorialRecursive = (number) => {
+  // O(n)
+  if (number <= 2) return number;
   return number * findFactorialRecursive(number - 1);
-}
+};
 
-const findFactorialIterative = number => { // O(n)
+const findFactorialIterative = (number) => {
+  // O(n)
   let answer = 1;
-  for(let i = 2; i <= number; i++)
-    answer = answer * i
+  for (let i = 2; i <= number; i++) answer = answer * i;
   return answer;
-}
+};
 
-findFactorialRecursive(5)
-findFactorialIterative(5)
+findFactorialRecursive(5);
+findFactorialIterative(5);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2394,20 +2622,20 @@ findFactorialIterative(5)
 
 //For example: fibonacciRecursive(6) should return 8
 
-const fibonacciIterative = n => {
+const fibonacciIterative = (n) => {
   const arr = [0, 1];
-  for (let i = 2; i <= n; i++){
-    arr.push(arr[i - 2] + arr[i -1]);
+  for (let i = 2; i <= n; i++) {
+    arr.push(arr[i - 2] + arr[i - 1]);
   }
- return arr[n];
-}
+  return arr[n];
+};
 fibonacciIterative(3);
 
-const fibonacciRecursive = n => {
-  if(n <= 1) return n; 
+const fibonacciRecursive = (n) => {
+  if (n <= 1) return n;
   return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
-}
-fibonacciRecursive(6)
+};
+fibonacciRecursive(6);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2449,14 +2677,14 @@ Divide and Conquer using Recursion
 
 ```javascript
 //Implement a function that reverses a string using iteration...and then recursion!
-const reverseString = str => str.split('').reverse().join('');
-reverseString('yoyo mastery')
+const reverseString = (str) => str.split("").reverse().join("");
+reverseString("yoyo mastery");
 
-const reverseStringRecursive = str => {
-  if(str.length === 1) return str;
+const reverseStringRecursive = (str) => {
+  if (str.length === 1) return str;
   return reverseStringRecursive(str.substring(1)).concat(str[0]);
-}
-reverseStringRecursive('yoyo mastery')
+};
+reverseStringRecursive("yoyo mastery");
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2488,7 +2716,7 @@ reverseStringRecursive('yoyo mastery')
 // default sort order is ascending
 // converting the elements into strings
 // then comparing their sequences of UTF-16 code units values
-const months = ['March', 'Jan', 'Feb', 'Dec'];
+const months = ["March", "Jan", "Feb", "Dec"];
 months.sort();
 console.log(months);
 // expected output: Array ["Dec", "Feb", "Jan", "March"]
@@ -2498,9 +2726,10 @@ array1.sort();
 console.log(array1);
 // expected output: Array [1, 100000, 21, 30, 4]
 ```
+
 **[⬆ back to top](#table-of-contents)**
 
-###  Sorting Algorithms
+### Sorting Algorithms
 
 [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms)
 
@@ -2511,17 +2740,17 @@ console.log(array1);
 ```javascript
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-const bubbleSort = array => {
+const bubbleSort = (array) => {
   const length = array.length;
   for (let i = 0; i < length; i++) {
-    for (let j = 0; j < length; j++) { 
-      if(array[j] > array[j+1]) {
-        [array[j], array[j+1]] = [array[j+1], array[j]];
+    for (let j = 0; j < length; j++) {
+      if (array[j] > array[j + 1]) {
+        [array[j], array[j + 1]] = [array[j + 1], array[j]];
       }
-      console.log(array)
-    }        
+      console.log(array);
+    }
   }
-}
+};
 
 bubbleSort(numbers);
 ```
@@ -2533,21 +2762,21 @@ bubbleSort(numbers);
 ```javascript
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-const selectionSort = array => {
+const selectionSort = (array) => {
   const length = array.length;
   for (let i = 0; i < length; i++) {
     let min = i;
     for (let j = i + 1; j < length; j++) {
       if (array[min] > array[j]) {
-          min = j;
+        min = j;
       }
     }
     if (min !== i) {
-      [array[i], array[min]] = [array[min], array[i]]
+      [array[i], array[min]] = [array[min], array[i]];
     }
   }
   return array;
-}
+};
 
 selectionSort(numbers);
 ```
@@ -2565,18 +2794,18 @@ selectionSort(numbers);
 ```javascript
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-const insertionSort = array => {
+const insertionSort = (array) => {
   for (let i = 1; i < array.length; i++) {
-    let j = i - 1
-    let tmp = array[i]
+    let j = i - 1;
+    let tmp = array[i];
     while (j >= 0 && array[j] > tmp) {
-      array[j + 1] = array[j]
-      j--
+      array[j + 1] = array[j];
+      j--;
     }
-    array[j+1] = tmp
+    array[j + 1] = tmp;
   }
-  return array
-}
+  return array;
+};
 
 insertionSort(numbers);
 ```
@@ -2597,38 +2826,35 @@ Divide & Conquer
 ```javascript
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-const mergeSort = array => {
+const mergeSort = (array) => {
   // base case
   if (array.length === 1) {
-    return array
+    return array;
   }
   // Split Array in into right and left
   const length = array.length;
-  const middle = Math.floor(length / 2)
-  const left = array.slice(0, middle) 
-  const right = array.slice(middle)
+  const middle = Math.floor(length / 2);
+  const left = array.slice(0, middle);
+  const right = array.slice(middle);
 
-  return merge(
-    mergeSort(left),
-    mergeSort(right)
-  )
-}
+  return merge(mergeSort(left), mergeSort(right));
+};
 
 const merge = (left, right) => {
   const result = [];
   let leftIndex = 0;
   let rightIndex = 0;
-  while(leftIndex < left.length && rightIndex < right.length){
-    if(left[leftIndex] < right[rightIndex]){
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
       result.push(left[leftIndex]);
       leftIndex++;
-    } else{
+    } else {
       result.push(right[rightIndex]);
-      rightIndex++
+      rightIndex++;
     }
-  }  
+  }
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
-}
+};
 
 const answer = mergeSort(numbers);
 ```
@@ -2646,35 +2872,35 @@ Stable VS Unstable Algorithms
 ```javascript
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-const swap = (array, a, b) => [array[a], array[b]] = [array[b], array[a]];
+const swap = (array, a, b) => ([array[a], array[b]] = [array[b], array[a]]);
 const partition = (array, pivot, left, right) => {
   let pivotValue = array[pivot];
   let partitionIndex = left;
 
-  for(let i = left; i < right; i++) {
-    if(array[i] < pivotValue){
+  for (let i = left; i < right; i++) {
+    if (array[i] < pivotValue) {
       swap(array, i, partitionIndex);
       partitionIndex++;
     }
   }
   swap(array, right, partitionIndex);
   return partitionIndex;
-}
+};
 
 const quickSort = (array, left = 0, right = array.length - 1) => {
   let pivot;
   let partitionIndex;
 
-  if(left < right) {
+  if (left < right) {
     pivot = right;
     partitionIndex = partition(array, pivot, left, right);
-    
+
     //sort left and right
     quickSort(array, left, partitionIndex - 1);
     quickSort(array, partitionIndex + 1, right);
   }
   return array;
-}
+};
 
 quickSort(numbers);
 ```
@@ -2701,45 +2927,45 @@ quickSort(numbers);
 ### Heap Sort
 
 ```javascript
-const swap = (array, a, b) => [array[a], array[b]] = [array[b], array[a]];
+const swap = (array, a, b) => ([array[a], array[b]] = [array[b], array[a]]);
 
 const max_heapify = (array, i, length) => {
   while (true) {
-    let left = i*2 + 1;
-    let right = i*2 + 2;
+    let left = i * 2 + 1;
+    let right = i * 2 + 2;
     let largest = i;
 
     if (left < length && array[left] > array[largest]) {
-        largest = left;
+      largest = left;
     }
 
     if (right < length && array[right] > array[largest]) {
-        largest = right;
+      largest = right;
     }
 
     if (i == largest) {
-        break;
+      break;
     }
 
     swap(array, i, largest);
     i = largest;
   }
-}
+};
 
 const heapify = (array, length) => {
-  for (let i = Math.floor(length/2); i >= 0; i--) {
+  for (let i = Math.floor(length / 2); i >= 0; i--) {
     max_heapify(array, i, length);
   }
-}
+};
 
-const heapsort = array => {
+const heapsort = (array) => {
   heapify(array, array.length);
 
   for (let i = array.length - 1; i > 0; i--) {
     swap(array, i, 0);
-    max_heapify(array, 0, i-1);
+    max_heapify(array, 0, i - 1);
   }
-}
+};
 
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 heapsort(numbers);
@@ -2761,7 +2987,7 @@ Can we beat O(nlogn)?
 
 - [Radix Sort](https://brilliant.org/wiki/radix-sort/)
 - [Radix Sort Animation](https://www.cs.usfca.edu/~galles/visualization/RadixSort.html)
-- [Counting Sort](https://brilliant.org/wiki/counting-sort/) 
+- [Counting Sort](https://brilliant.org/wiki/counting-sort/)
 - [Counting Sort Animation](https://www.cs.usfca.edu/~galles/visualization/CountingSort.html)
 
 **[⬆ back to top](#table-of-contents)**
@@ -2795,12 +3021,12 @@ Can we beat O(nlogn)?
 ### Linear Search
 
 ```javascript
-const beasts = ['Centaur', 'Godzilla', 'Mosura', 'Minotaur', 'Hydra', 'Nessie'];
+const beasts = ["Centaur", "Godzilla", "Mosura", "Minotaur", "Hydra", "Nessie"];
 
-beasts.indexOf('Godzilla'); // O(n)
-beasts.findIndex(item => item === 'Godzilla');  // O(n)
-beasts.find(item => item === 'Godzilla'); // O(n)
-beasts.includes('Godzilla'); // O(n)
+beasts.indexOf("Godzilla"); // O(n)
+beasts.findIndex((item) => item === "Godzilla"); // O(n)
+beasts.find((item) => item === "Godzilla"); // O(n)
+beasts.includes("Godzilla"); // O(n)
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2808,30 +3034,27 @@ beasts.includes('Godzilla'); // O(n)
 ### Binary Search
 
 ```javascript
-const binarySearch = (array, x, start = 0, end = array.length-1) => { 
+const binarySearch = (array, x, start = 0, end = array.length - 1) => {
+  // Base Condition
+  if (start > end) return false;
 
-  // Base Condition 
-  if (start > end) return false; 
-  
-  // Find the middle index 
-  let mid=Math.floor((start + end)/2); 
-  
-  // Compare mid with given key x 
-  if (array[mid]===x) return true; 
+  // Find the middle index
+  let mid = Math.floor((start + end) / 2);
 
-  // If element at mid is greater than x, 
-  // search in the left half of mid 
-  if(array[mid] > x)  
-    return binarySearch(array, x, start, mid-1); 
-  else
-    // If element at mid is smaller than x, 
-    // search in the right half of mid 
-    return binarySearch(array, x, mid+1, end); 
-}
+  // Compare mid with given key x
+  if (array[mid] === x) return true;
 
-const numbers = [1, 3, 5, 7, 8, 9]; 
-binarySearch(numbers, 5, 0, numbers.length-1)
-binarySearch(numbers, 6, 0, numbers.length-1)
+  // If element at mid is greater than x,
+  // search in the left half of mid
+  if (array[mid] > x) return binarySearch(array, x, start, mid - 1);
+  // If element at mid is smaller than x,
+  // search in the right half of mid
+  else return binarySearch(array, x, mid + 1, end);
+};
+
+const numbers = [1, 3, 5, 7, 8, 9];
+binarySearch(numbers, 5, 0, numbers.length - 1);
+binarySearch(numbers, 6, 0, numbers.length - 1);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -2877,7 +3100,7 @@ DFS
 
 ```javascript
 class Node {
-  constructor(value){
+  constructor(value) {
     this.left = null;
     this.right = null;
     this.value = value;
@@ -2885,49 +3108,49 @@ class Node {
 }
 
 class BinarySearchTree {
-  constructor(){
+  constructor() {
     this.root = null;
   }
-  insert(value){
+  insert(value) {
     const newNode = new Node(value);
     if (this.root === null) {
       this.root = newNode;
     } else {
       let currentNode = this.root;
-      while(true){
-        if(value < currentNode.value){
+      while (true) {
+        if (value < currentNode.value) {
           //Left
-          if(!currentNode.left){
+          if (!currentNode.left) {
             currentNode.left = newNode;
             return this;
           }
           currentNode = currentNode.left;
         } else {
           //Right
-          if(!currentNode.right){
+          if (!currentNode.right) {
             currentNode.right = newNode;
             return this;
-          } 
+          }
           currentNode = currentNode.right;
         }
       }
     }
   }
-  lookup(value){
+  lookup(value) {
     if (!this.root) {
       return false;
     }
     let currentNode = this.root;
-    while(currentNode){
-      if(value < currentNode.value){
+    while (currentNode) {
+      if (value < currentNode.value) {
         currentNode = currentNode.left;
-      } else if(value > currentNode.value){
+      } else if (value > currentNode.value) {
         currentNode = currentNode.right;
       } else if (currentNode.value === value) {
         return currentNode;
       }
     }
-    return null
+    return null;
   }
   remove(value) {
     if (!this.root) {
@@ -2935,92 +3158,90 @@ class BinarySearchTree {
     }
     let currentNode = this.root;
     let parentNode = null;
-    while(currentNode){
-      if(value < currentNode.value){
+    while (currentNode) {
+      if (value < currentNode.value) {
         parentNode = currentNode;
         currentNode = currentNode.left;
-      } else if(value > currentNode.value){
+      } else if (value > currentNode.value) {
         parentNode = currentNode;
         currentNode = currentNode.right;
       } else if (currentNode.value === value) {
         //We have a match, get to work!
-        
-        //Option 1: No right child: 
+
+        //Option 1: No right child:
         if (currentNode.right === null) {
           if (parentNode === null) {
             this.root = currentNode.left;
           } else {
-            
             //if parent > current value, make current left child a child of parent
-            if(currentNode.value < parentNode.value) {
+            if (currentNode.value < parentNode.value) {
               parentNode.left = currentNode.left;
-            
-            //if parent < current value, make left child a right child of parent
-            } else if(currentNode.value > parentNode.value) {
+
+              //if parent < current value, make left child a right child of parent
+            } else if (currentNode.value > parentNode.value) {
               parentNode.right = currentNode.left;
             }
           }
-        
-        //Option 2: Right child which doesnt have a left child
+
+          //Option 2: Right child which doesnt have a left child
         } else if (currentNode.right.left === null) {
-          if(parentNode === null) {
+          if (parentNode === null) {
             this.root = currentNode.left;
           } else {
             currentNode.right.left = currentNode.left;
-            
+
             //if parent > current, make right child of the left the parent
-            if(currentNode.value < parentNode.value) {
+            if (currentNode.value < parentNode.value) {
               parentNode.left = currentNode.right;
-            
-            //if parent < current, make right child a right child of the parent
+
+              //if parent < current, make right child a right child of the parent
             } else if (currentNode.value > parentNode.value) {
               parentNode.right = currentNode.right;
             }
           }
-        
-        //Option 3: Right child that has a left child
-        } else {
 
+          //Option 3: Right child that has a left child
+        } else {
           //find the Right child's left most child
           let leftmost = currentNode.right.left;
           let leftmostParent = currentNode.right;
-          while(leftmost.left !== null) {
+          while (leftmost.left !== null) {
             leftmostParent = leftmost;
             leftmost = leftmost.left;
           }
-          
+
           //Parent's left subtree is now leftmost's right subtree
           leftmostParent.left = leftmost.right;
           leftmost.left = currentNode.left;
           leftmost.right = currentNode.right;
 
-          if(parentNode === null) {
+          if (parentNode === null) {
             this.root = leftmost;
           } else {
-            if(currentNode.value < parentNode.value) {
+            if (currentNode.value < parentNode.value) {
               parentNode.left = leftmost;
-            } else if(currentNode.value > parentNode.value) {
+            } else if (currentNode.value > parentNode.value) {
               parentNode.right = leftmost;
             }
           }
         }
-      return true;
+        return true;
       }
     }
   }
-  BreadthFirstSearch(){
+  BreadthFirstSearch() {
     let currentNode = this.root;
     let list = [];
     let queue = [];
     queue.push(currentNode);
 
-    while(queue.length > 0){
+    while (queue.length > 0) {
       currentNode = queue.shift();
       list.push(currentNode.value);
-      if(currentNode.left) {
+      if (currentNode.left) {
         queue.push(currentNode.left);
       }
-      if(currentNode.right) {
+      if (currentNode.right) {
         queue.push(currentNode.right);
       }
     }
@@ -3032,7 +3253,7 @@ class BinarySearchTree {
     }
     const currentNode = queue.shift();
     list.push(currentNode.value);
-    
+
     if (currentNode.left) {
       queue.push(currentNode.left);
     }
@@ -3044,22 +3265,23 @@ class BinarySearchTree {
 }
 
 const tree = new BinarySearchTree();
-tree.insert(9)
-tree.insert(4)
-tree.insert(6)
-tree.insert(20)
-tree.insert(170)
-tree.insert(15)
-tree.insert(1)
+tree.insert(9);
+tree.insert(4);
+tree.insert(6);
+tree.insert(20);
+tree.insert(170);
+tree.insert(15);
+tree.insert(1);
 
-tree.BreadthFirstSearch()
-tree.BreadthFirstSearchR([tree.root], [])
+tree.BreadthFirstSearch();
+tree.BreadthFirstSearchR([tree.root], []);
 
 //     9
 //  4     20
 //1  6  15  170
 // BFS - [9, 4, 20, 1, 6, 15, 170]
 ```
+
 **[⬆ back to top](#table-of-contents)**
 
 ### PreOrder, InOrder, PostOrder
@@ -3081,7 +3303,7 @@ Post Order - [1, 6, 4, 15, 170, 20, 9]
 
 ```javascript
 class Node {
-  constructor(value){
+  constructor(value) {
     this.left = null;
     this.right = null;
     this.value = value;
@@ -3089,49 +3311,49 @@ class Node {
 }
 
 class BinarySearchTree {
-  constructor(){
+  constructor() {
     this.root = null;
   }
-  insert(value){
+  insert(value) {
     const newNode = new Node(value);
     if (this.root === null) {
       this.root = newNode;
     } else {
       let currentNode = this.root;
-      while(true){
-        if(value < currentNode.value){
+      while (true) {
+        if (value < currentNode.value) {
           //Left
-          if(!currentNode.left){
+          if (!currentNode.left) {
             currentNode.left = newNode;
             return this;
           }
           currentNode = currentNode.left;
         } else {
           //Right
-          if(!currentNode.right){
+          if (!currentNode.right) {
             currentNode.right = newNode;
             return this;
-          } 
+          }
           currentNode = currentNode.right;
         }
       }
     }
   }
-  lookup(value){
+  lookup(value) {
     if (!this.root) {
       return false;
     }
     let currentNode = this.root;
-    while(currentNode){
-      if(value < currentNode.value){
+    while (currentNode) {
+      if (value < currentNode.value) {
         currentNode = currentNode.left;
-      } else if(value > currentNode.value){
+      } else if (value > currentNode.value) {
         currentNode = currentNode.right;
       } else if (currentNode.value === value) {
         return currentNode;
       }
     }
-    return null
+    return null;
   }
   remove(value) {
     if (!this.root) {
@@ -3139,131 +3361,129 @@ class BinarySearchTree {
     }
     let currentNode = this.root;
     let parentNode = null;
-    while(currentNode){
-      if(value < currentNode.value){
+    while (currentNode) {
+      if (value < currentNode.value) {
         parentNode = currentNode;
         currentNode = currentNode.left;
-      } else if(value > currentNode.value){
+      } else if (value > currentNode.value) {
         parentNode = currentNode;
         currentNode = currentNode.right;
       } else if (currentNode.value === value) {
         //We have a match, get to work!
-        
-        //Option 1: No right child: 
+
+        //Option 1: No right child:
         if (currentNode.right === null) {
           if (parentNode === null) {
             this.root = currentNode.left;
           } else {
-            
             //if parent > current value, make current left child a child of parent
-            if(currentNode.value < parentNode.value) {
+            if (currentNode.value < parentNode.value) {
               parentNode.left = currentNode.left;
-            
-            //if parent < current value, make left child a right child of parent
-            } else if(currentNode.value > parentNode.value) {
+
+              //if parent < current value, make left child a right child of parent
+            } else if (currentNode.value > parentNode.value) {
               parentNode.right = currentNode.left;
             }
           }
-        
-        //Option 2: Right child which doesnt have a left child
+
+          //Option 2: Right child which doesnt have a left child
         } else if (currentNode.right.left === null) {
-          if(parentNode === null) {
+          if (parentNode === null) {
             this.root = currentNode.left;
           } else {
             currentNode.right.left = currentNode.left;
-            
+
             //if parent > current, make right child of the left the parent
-            if(currentNode.value < parentNode.value) {
+            if (currentNode.value < parentNode.value) {
               parentNode.left = currentNode.right;
-            
-            //if parent < current, make right child a right child of the parent
+
+              //if parent < current, make right child a right child of the parent
             } else if (currentNode.value > parentNode.value) {
               parentNode.right = currentNode.right;
             }
           }
-        
-        //Option 3: Right child that has a left child
-        } else {
 
+          //Option 3: Right child that has a left child
+        } else {
           //find the Right child's left most child
           let leftmost = currentNode.right.left;
           let leftmostParent = currentNode.right;
-          while(leftmost.left !== null) {
+          while (leftmost.left !== null) {
             leftmostParent = leftmost;
             leftmost = leftmost.left;
           }
-          
+
           //Parent's left subtree is now leftmost's right subtree
           leftmostParent.left = leftmost.right;
           leftmost.left = currentNode.left;
           leftmost.right = currentNode.right;
 
-          if(parentNode === null) {
+          if (parentNode === null) {
             this.root = leftmost;
           } else {
-            if(currentNode.value < parentNode.value) {
+            if (currentNode.value < parentNode.value) {
               parentNode.left = leftmost;
-            } else if(currentNode.value > parentNode.value) {
+            } else if (currentNode.value > parentNode.value) {
               parentNode.right = leftmost;
             }
           }
         }
-      return true;
+        return true;
       }
     }
   }
   DFTPreOrder(currentNode, list) {
     return traversePreOrder(this.root, []);
   }
-  DFTPostOrder(){
-    return traversePostOrder(this.root, []); 
+  DFTPostOrder() {
+    return traversePostOrder(this.root, []);
   }
-  DFTInOrder(){
+  DFTInOrder() {
     return traverseInOrder(this.root, []);
-  } 
+  }
 }
 
 const traversePreOrder = (node, list) => {
   list.push(node.value);
-  if(node.left) {
+  if (node.left) {
     traversePreOrder(node.left, list);
   }
-  if(node.right) {
+  if (node.right) {
     traversePreOrder(node.right, list);
   }
   return list;
-}
+};
 
 const traverseInOrder = (node, list) => {
-  if(node.left) {
+  if (node.left) {
     traverseInOrder(node.left, list);
   }
   list.push(node.value);
-  if(node.right) {
+  if (node.right) {
     traverseInOrder(node.right, list);
   }
   return list;
-}
+};
 
 const traversePostOrder = (node, list) => {
-  if(node.left) {
+  if (node.left) {
     traversePostOrder(node.left, list);
   }
-  if(node.right) {
+  if (node.right) {
     traversePostOrder(node.right, list);
   }
   list.push(node.value);
   return list;
-}
+};
 
 const tree = new BinarySearchTree();
-tree.insert(9)
-tree.insert(4)
-tree.insert(6)
-tree.insert(20)
-tree.insert(170)
-tree.insert(15)
-tree.insert(1)
+tree.insert(9);
+tree.insert(4);
+tree.insert(6);
+tree.insert(20);
+tree.insert(170);
+tree.insert(15);
+tree.insert(1);
 
 tree.DFTPreOrder();
 tree.DFTInOrder();
@@ -3343,47 +3563,47 @@ Optimization - Caching
 ### Memoization
 
 ```javascript
-const addTo80 = n => n + 80;
-addTo80(5)
-addTo80(5)
-addTo80(5)
+const addTo80 = (n) => n + 80;
+addTo80(5);
+addTo80(5);
+addTo80(5);
 
 //learn to cache
 let cache = {};
-const memoizeAddTo80 = n => {
+const memoizeAddTo80 = (n) => {
   if (n in cache) {
     return cache[n];
   } else {
-    console.log('long time');
+    console.log("long time");
     const answer = n + 80;
     cache[n] = answer;
     return answer;
   }
-}
-memoizeAddTo80(5)
-memoizeAddTo80(5)
-memoizeAddTo80(5)
+};
+memoizeAddTo80(5);
+memoizeAddTo80(5);
+memoizeAddTo80(5);
 
 // let's make that better with no global scope
 // This is closure in javascript
-const memoizeAddTo80Closure = n => { 
+const memoizeAddTo80Closure = (n) => {
   const cache = {};
-  return n => {
+  return (n) => {
     if (n in cache) {
       return cache[n];
     } else {
-      console.log('long time');
+      console.log("long time");
       const answer = n + 80;
       cache[n] = answer;
       return answer;
     }
-  }
-}
+  };
+};
 
 const memoized = memoizeAddTo80Closure();
-memoized(5)
-memoized(5)
-memoized(5)
+memoized(5);
+memoized(5);
+memoized(5);
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -3393,18 +3613,20 @@ memoized(5)
 ```javascript
 //0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233...
 let calculations = 0;
-const fibonacci = n => { //O(2^n)
+const fibonacci = (n) => {
+  //O(2^n)
   calculations++;
   if (n < 2) {
-    return n
+    return n;
   }
-  return fibonacci(n-1) + fibonacci(n-2);
-}
-fibonacci(10)
-calculations
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
+fibonacci(10);
+calculations;
 
-calculations = 0
-const fibonacciMaster = () => { //O(n)
+calculations = 0;
+const fibonacciMaster = () => {
+  //O(n)
   let cache = {};
   return function fib(n) {
     calculations++;
@@ -3414,31 +3636,31 @@ const fibonacciMaster = () => { //O(n)
       if (n < 2) {
         return n;
       } else {
-        cache[n] = fib(n-1) + fib(n-2);
+        cache[n] = fib(n - 1) + fib(n - 2);
         return cache[n];
       }
     }
-  }
-}
+  };
+};
 const fasterFib = fibonacciMaster();
-fasterFib(10)
-calculations
+fasterFib(10);
+calculations;
 
-const fibonacciMaster2 = n => {
+const fibonacciMaster2 = (n) => {
   let answer = [0, 1];
-  for ( let i = 2; i <= n; i++) {
-    answer.push(answer[i-2]+ answer[i-1]);
+  for (let i = 2; i <= n; i++) {
+    answer.push(answer[i - 2] + answer[i - 1]);
   }
   return answer.pop();
-}
-fibonacciMaster2(10)
+};
+fibonacciMaster2(10);
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
 ### Interview Questions: Dynamic Programming
 
-- [House Robber](https://leetcode.com/problems/house-robber/) 
+- [House Robber](https://leetcode.com/problems/house-robber/)
 - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 
@@ -3633,5 +3855,5 @@ To Do
 - [Facebook Interview Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246842#content)
 - [Google Interview Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246838#content)
 - [Domain Specific Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246846#content)
-   
+
 **[⬆ back to top](#table-of-contents)**
