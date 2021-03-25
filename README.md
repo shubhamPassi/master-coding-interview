@@ -4,7 +4,6 @@
 
 - [Master the Coding Interview: Data Structures + Algorithms](#master-the-coding-interview-data-structures--algorithms)
   - [Table of contents](#table-of-contents)
-  - [**Section 0: Path**](#Section-0-Path)
   - [**Section 1: Introduction**](#section-1-introduction)
   - [**Section 2: Getting More Interviews**](#section-2-getting-more-interviews)
     - [Resume](#resume)
@@ -149,15 +148,9 @@
     - [Negotiation Master](#negotiation-master)
   - [**Section 19: Extras: Google, Amazon, Facebook Interview Questions**](#section-19-extras-google-amazon-facebook-interview-questions)
 
-## **Section 0: Path**
-
-![](path.svg)
-
-**[⬆ back to top](#table-of-contents)**
-
 ## **Section 1: Introduction**
 
-[Interview Mind Map](https://coggle.it/diagram/W5u8QkZs6r4sZM3J/t/master-the-interview)
+![](Master_the_Interview.svg)
 
 - Getting the Interview
 - Big O Notation
@@ -165,7 +158,7 @@
 - Non Technical Interviews
 - Offer + Negotiation
 
-[Technical Interview Mind Map](https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link)
+![](Master_the_Interview_Click_here_for_Course_Link.svg)
 
 - Data Structures
 - Algorithms
