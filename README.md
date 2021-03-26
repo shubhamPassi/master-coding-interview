@@ -1283,12 +1283,12 @@ strings.filter((element) => !(element === "alien")); // O(n)
 
 JavaScript Array is dynamic
 
-| Array Operation | Big O        | Dynamic Array | Big O        |
-| --------------- | ------------ | ------------- | ------------ |
-| lookup          | O(1)         | lookup        | O(1)         |
-| push            | O(1) or O(n) | append\*      | O(1) or O(n) |
-| insert          | O(n)         | insert        | O(n)         |
-| delete          | O(n)         | delete        | O(n)         |
+| Array Operation | Big O | Dynamic Array | Big O        |
+| --------------- | ----- | ------------- | ------------ |
+| lookup          | O(1)  | lookup        | O(1)         |
+| push            | O(1)  | append\*      | O(1) or O(n) |
+| insert          | O(n)  | insert        | O(n)         |
+| delete          | O(n)  | delete        | O(n)         |
 
 A **dynamic array** is an array with a big improvement: automatic resizing.
 
