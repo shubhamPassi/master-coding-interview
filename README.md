@@ -1266,9 +1266,8 @@ strings.unshift("x"); // O(n)
 //  'alien' will be added at 2 index and all remaining elements which comes after alien will push to right
 // ["a", "b", "alien", "c", "d"];
 //   0    1      2      3    4
-strings.splice(2, 0, "alien"); // O(n/2) => O(n) (n/2 because we do itation only on half array to change indexs
-//  of remaing elements) => O(n)  (as we remove all the constants in big O)
-s;
+strings.splice(2, 0, "alien"); // O(n/2) => O(n) (n/2 because we do itation only on half array to change indexs of remaing elements) => O(n)  (as we remove all the constants in big O)
+
 //filter
 // ["a", "b", "alien", "c", "d"];
 //   0    1      2      3    4
