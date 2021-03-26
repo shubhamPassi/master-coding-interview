@@ -1325,7 +1325,7 @@ Why not just extend the existing array? Because that memory might already be tak
 
 Each item has to be individually copied into the new array.
 
-<img align="absmiddle" src=cs_for_hackers\_\_dynamic_arrays_copy_array.svg">
+<img align="absmiddle" src="cs_for_hackers\_\_dynamic_arrays_copy_array.svg">
 
 Copying each item over costs O(n)O(n) time! So whenever appending an item to our dynamic array forces us to make a new double-size underlying array, that append takes O(n)O(n) time.
 
