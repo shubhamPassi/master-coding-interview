@@ -1312,7 +1312,7 @@ When you allocate a dynamic array, your dynamic array implementation makes an un
 
 We'd say this dynamic array's **size** is 4 and its **capacity** is 10. The dynamic array stores an endIndex to keep track of where the dynamic array ends and the extra capacity begins.
 
-<p align="center"> ![](dynamic_arrays__capacity_size_end_index.svg)</p>
+![](dynamic_arrays__capacity_size_end_index.svg)
 
 **Doubling Appends**
 What if we try to append an item but our array's capacity is already full?
@@ -1325,7 +1325,7 @@ Why not just extend the existing array? Because that memory might already be tak
 
 Each item has to be individually copied into the new array.
 
-<img align="absmiddle" src="cs_for_hackers\_\_dynamic_arrays_copy_array.svg">
+![](cs_for_hackers__dynamic_arrays_copy_array.svg)
 
 Copying each item over costs O(n)O(n) time! So whenever appending an item to our dynamic array forces us to make a new double-size underlying array, that append takes O(n)O(n) time.
 
