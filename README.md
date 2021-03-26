@@ -1234,27 +1234,47 @@ Array
 | delete    | O(n)  |
 
 ```javascript
-// 4 * 4 = 16 bytes of storage
-const strings = ["a", "b", "c", "d"];
-strings[2];
+const strings = ["a", "b", "c", "d"]; // 4 * 4 = 16 bytes of storage
 
-const numbers = [1, 2, 3, 4, 5];
+strings[2]; // O(1)
 
-//push
+// push
 strings.push("e"); // O(1)
 
-//pop
-strings.pop(); // O(1)
+// pop
 strings.pop(); // O(1)
 
-//unshift
-// 'x' will push all elements to their right
+//shift
+// ["a", "b", "c", "d"];
+//   0    1    2    3
+// first element is removed from start and all elements to their left
+// ["b", "c", "d"];
+//   0    1    2
+strings.shift(); // O(n)
+
+// unshift
+// ["a", "b", "c", "d"];
+//   0    1    2    3
+// 'x' will added at start and all elements to their right
 // ['x', 'a', 'b', 'c', 'd'];
 //   0    1    2    3    4
 strings.unshift("x"); // O(n)
 
-//splice
-strings.splice(2, 0, "alien"); // O(n)
+// splice
+// ["a", "b", "c", "d";
+//   0    1    2    3
+//  'alien' will be added at 2 index and all remaining elements which comes after alien will push to right
+// ["a", "b", "alien", "c", "d"];
+//   0    1      2      3    4
+strings.splice(2, 0, "alien"); // O(n/2) => O(n) (n/2 because we do itation only on half array to change indexs of remaing elements) => O(n)  (as we remove all the constants in big O)
+
+//filter
+// ["a", "b", "alien", "c", "d"];
+//   0    1      2      3    4
+// "aline will get filtered from this array"
+// ["a", "b", "c", "d"];
+//   0    1    2    3
+strings.filter((element) => !(element === "alien")); // O(n)
 ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -1263,12 +1283,53 @@ strings.splice(2, 0, "alien"); // O(n)
 
 JavaScript Array is dynamic
 
-| Array Operation | Big O | Dynamic Array | Big O        |
-| --------------- | ----- | ------------- | ------------ |
-| lookup          | O(1)  | lookup        | O(1)         |
-| push            | O(1)  | append\*      | O(1) or O(n) |
-| insert          | O(n)  | insert        | O(n)         |
-| delete          | O(n)  | delete        | O(n)         |
+| Array Operation | Big O        | Dynamic Array | Big O        |
+| --------------- | ------------ | ------------- | ------------ |
+| lookup          | O(1)         | lookup        | O(1)         |
+| push            | O(1) or O(n) | append\*      | O(1) or O(n) |
+| insert          | O(n)         | insert        | O(n)         |
+| delete          | O(n)         | delete        | O(n)         |
+
+A **dynamic array** is an array with a big improvement: automatic resizing.
+
+One limitation of arrays is that they're fixed size, meaning you need to specify the number of elements your array will hold ahead of time.
+
+A dynamic array expands as you add more elements. So you don't need to determine the size ahead of time.
+
+**Strengths:**
+
+- **Fast lookups**. Just like arrays, retrieving the element at a given index takes O(1)O(1) time.
+- **Variable size**. You can add as many items as you want, and the dynamic array will expand to hold them.
+- **Cache-friendly**. Just like arrays, dynamic arrays place items right next to each other in memory, making efficient use of caches.
+
+**Weaknesses:**
+
+- **Slow worst-case appends**. Usually, adding a new element at the end of the dynamic array takes O(1)O(1) time. But if the dynamic array doesn't have any room for the new item, it'll need to expand, which takes O(n)O(n) time.
+- **Costly inserts and deletes**. Just like arrays, elements are stored adjacent to each other. So adding or removing an item in the middle of the array requires "scooting over" other elements, which takes O(n)O(n) time.
+
+**Size vs. Capacity**
+When you allocate a dynamic array, your dynamic array implementation makes an underlying fixed-size array. The starting size depends on the implementation—let's say our implementation uses 10 indices. Now say we append 4 items to our dynamic array. At this point, our dynamic array has a length of 4. But the underlying array has a length of 10.
+
+We'd say this dynamic array's **size** is 4 and its **capacity** is 10. The dynamic array stores an endIndex to keep track of where the dynamic array ends and the extra capacity begins.
+
+![](dynamic_arrays__capacity_size_end_index.svg)
+
+**Doubling Appends**
+What if we try to append an item but our array's capacity is already full?
+
+To make room, dynamic arrays automatically make a new, bigger underlying array. Usually twice as big.
+
+```javascript
+Why not just extend the existing array? Because that memory might already be taken by another program.
+```
+
+Each item has to be individually copied into the new array.
+
+![](cs_for_hackers__dynamic_arrays_copy_array.svg)
+
+Copying each item over costs O(n)O(n) time! So whenever appending an item to our dynamic array forces us to make a new double-size underlying array, that append takes O(n)O(n) time.
+
+That's the worst case. But in the best case (and the average case), appends are just O(1)O(1) time.
 
 **[⬆ back to top](#table-of-contents)**
 
