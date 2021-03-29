@@ -1890,33 +1890,33 @@ Solution:
 <details>
     <summary>Click to expand!</summary>
 
-    ```javascript
-    // Way 1
-    const mergeSortedArrays1 = (array1, array2) => {
+```javascript
+// Way 1
+const mergeSortedArrays1 = (array1, array2) => {
     const mergedArray = [];
     let i = 0;
     let j = 0;
 
     while (i < array1.length && j < array2.length) {
-    if (array1[i] <= array2[j]) {
-    mergedArray.push(array1[i++]);
-    } else {
-    mergedArray.push(array2[j++]);
-    }
+        if (array1[i] <= array2[j]) {
+            mergedArray.push(array1[i++]);
+        } else {
+            mergedArray.push(array2[j++]);
+        }
     }
 
     for (; i < array1.length; i++) {
-    mergedArray.push(array1[i]);
+        mergedArray.push(array1[i]);
     }
 
     for (; j < array2.length; j++) {
-    mergedArray.push(array1[i]);
+        mergedArray.push(array1[i]);
     }
     return mergedArray;
-    };
+};
 
-    // Way 2
-    const mergeSortedArrays2 = (array1, array2) => {
+// Way 2
+const mergeSortedArrays2 = (array1, array2) => {
     const mergedArray = [];
     let array1Item = array1[0];
     let array2Item = array2[0];
@@ -1924,33 +1924,33 @@ Solution:
     let j = 1;
 
     if (array1.length === 0) {
-    return array2;
+        return array2;
     }
 
     if (array2.length === 0) {
-    return array1;
+        return array1;
     }
 
     while (array1Item || array2Item) {
-    if (!array2Item || array1Item <= array2Item) {
-    mergedArray.push(array1Item);
-    array1Item = array1[i++];
-    } else if (!array1Item || array1Item >= array2Item) {
-    mergedArray.push(array2Item);
-    array2Item = array2[j++];
-    }
+        if (!array2Item || array1Item <= array2Item) {
+            mergedArray.push(array1Item);
+            array1Item = array1[i++];
+        } else if (!array1Item || array1Item >= array2Item) {
+            mergedArray.push(array2Item);
+            array2Item = array2[j++];
+        }
     }
     return mergedArray;
-    };
+};
 
-    // Way 3
-    const mergeSortedArrays3 = (array1, array2) =>
+// Way 3
+const mergeSortedArrays3 = (array1, array2) =>
     array1.concat(array2).sort((a, b) => a - b); // Assending Sort: a-b, Decending Sort: b-a
 
-    console.log(mergeSortedArrays1([0, 3, 4, 31], [4, 6, 30]));
-    console.log(mergeSortedArrays2([0, 3, 4, 31], [4, 6, 30]));
-    console.log(mergeSortedArrays3([0, 3, 4, 31], [4, 6, 30]));
-    ```
+console.log(mergeSortedArrays1([0, 3, 4, 31], [4, 6, 30]));
+console.log(mergeSortedArrays2([0, 3, 4, 31], [4, 6, 30]));
+console.log(mergeSortedArrays3([0, 3, 4, 31], [4, 6, 30]));
+```
 
 </details>
 
