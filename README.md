@@ -724,6 +724,7 @@ arrayOfHiNTimes(6);
 
 ### Exercise: Interview Question
 
+Exercise:
 Given 2 arrays, create a function that let's a user know (true/false) whether these two arrays contain any common items.
 
 1. When the interviewer says the question, write down the key points at the top. Make sure you have all the details. Show how organized you are.
@@ -1876,13 +1877,98 @@ Thought process:
 
 ### Exercise: Merge Sorted Arrays
 
-```javascript
-const ascendingSort = (a, b) => a - b;
-const descendingSort = (a, b) => b - a;
+Exercise:
 
-const mergeSortedArrays = (arr1, arr2) => arr1.concat(arr2).sort(ascendingSort);
-mergeSortedArrays([0, 3, 4, 31], [3, 4, 6, 30]);
+```javascript
+// Merge sorted arrays or 2-Way merge surt
+// mergeSortedArrays([0,3,4,31],[4,6,30]);
+// return [ 0, 3, 4, 4, 6, 30, 31]
 ```
+
+Solution:
+
+<details>
+    <summary>Click to expand!</summary>    
+    
+    ```javascript
+    // Way 1
+    const mergeSortedArrays1 = (array1, array2) => {
+    const mergedArray = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < array1.length && j < array2.length) {
+    if (array1[i] <= array2[j]) {
+    mergedArray.push(array1[i++]);
+    } else {
+    mergedArray.push(array2[j++]);
+    }
+    }
+
+    for (; i < array1.length; i++) {
+    mergedArray.push(array1[i]);
+    }
+
+    for (; j < array2.length; j++) {
+    mergedArray.push(array1[i]);
+    }
+    return mergedArray;
+    };
+
+    // Way 2
+    const mergeSortedArrays2 = (array1, array2) => {
+    const mergedArray = [];
+    let array1Item = array1[0];
+    let array2Item = array2[0];
+    let i = 1;
+    let j = 1;
+
+    if (array1.length === 0) {
+    return array2;
+    }
+
+    if (array2.length === 0) {
+    return array1;
+    }
+
+    while (array1Item || array2Item) {
+    if (!array2Item || array1Item <= array2Item) {
+    mergedArray.push(array1Item);
+    array1Item = array1[i++];
+    } else if (!array1Item || array1Item >= array2Item) {
+    mergedArray.push(array2Item);
+    array2Item = array2[j++];
+    }
+    }
+    return mergedArray;
+    };
+
+    // Way 3
+    const mergeSortedArrays3 = (array1, array2) =>
+    array1.concat(array2).sort((a, b) => a - b); // Assending Sort: a-b, Decending Sort: b-a
+
+    console.log(mergeSortedArrays1([0, 3, 4, 31], [4, 6, 30]));
+    console.log(mergeSortedArrays2([0, 3, 4, 31], [4, 6, 30]));
+    console.log(mergeSortedArrays3([0, 3, 4, 31], [4, 6, 30]));
+    ```
+
+</details>
+
+**[⬆ back to top](#table-of-contents)**
+
+### Where Should We Use Arrays
+
+![](where-to-use-array-.png)
+
+Fast:
+
+-   lookup, push, pop are very fast in arrays.
+-   These all things are fast in arrays beacuse arrays are ordered and elements are close to each other.
+
+Slow:
+
+-   Slow insert and delete beacuse we have to shift array whenever it's not at the end of the array.
+-   if using static array it has fixed size. it means we have to delclare memory many times when we requires big array. But it can be avoided by using morden languages(javascript) that has dynamic arrays.
 
 **[⬆ back to top](#table-of-contents)**
 
