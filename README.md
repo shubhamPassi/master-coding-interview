@@ -1742,7 +1742,7 @@ console.log(stringReverse4("hi my name is shubham"));
 console.log(stringReverse5("hi my name is shubham"));
 ```
 
-Step by step through a problem using cheatsheet:
+Thought process:
 
   <details>
     <summary>Click to expand!</summary>
