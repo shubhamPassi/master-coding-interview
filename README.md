@@ -1888,8 +1888,8 @@ Exercise:
 Solution:
 
 <details>
-    <summary>Click to expand!</summary>    
-    
+    <summary>Click to expand!</summary>
+
     ```javascript
     // Way 1
     const mergeSortedArrays1 = (array1, array2) => {
