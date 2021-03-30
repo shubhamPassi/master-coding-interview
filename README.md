@@ -1974,6 +1974,8 @@ Slow:
 
 ### Interview Questions: Arrays
 
+Question: [LeetCode Question 1](https://leetcode.com/problems/two-sum/description/)
+
 ```javascript
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -1985,6 +1987,9 @@ Slow:
 ```
 
 Solution:
+
+<details>
+    <summary>Click to expand!</summary>
 
 1. Brute force method
 
@@ -2042,6 +2047,8 @@ var twoSum = (nums, target) => {
 
 twoSum(nums, target);
 ```
+
+<details>
 
 **[⬆ back to top](#table-of-contents)**
 
