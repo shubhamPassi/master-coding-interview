@@ -1947,9 +1947,9 @@ const mergeSortedArrays2 = (array1, array2) => {
 const mergeSortedArrays3 = (array1, array2) =>
     array1.concat(array2).sort((a, b) => a - b); // Assending Sort: a-b, Decending Sort: b-a
 
-console.log(mergeSortedArrays1([0, 3, 4, 31], [4, 6, 30]));
-console.log(mergeSortedArrays2([0, 3, 4, 31], [4, 6, 30]));
-console.log(mergeSortedArrays3([0, 3, 4, 31], [4, 6, 30]));
+console.log(mergeSortedArrays1([0, 3, 4, 31], [4, 6, 30])); // [0, 3, 4, 4, 6, 30, 31]
+console.log(mergeSortedArrays2([0, 3, 4, 31], [4, 6, 30])); // [0, 3, 4, 4, 6, 30, 31]
+console.log(mergeSortedArrays3([0, 3, 4, 31], [4, 6, 30])); // [0, 3, 4, 4, 6, 30, 31]
 ```
 
 </details>
@@ -1974,16 +1974,23 @@ Slow:
 
 ### Interview Questions: Arrays
 
--   [LeetCode](https://leetcode.com/)
--   [Interview Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12310382#content)
-
 ```javascript
-// Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
+// You can return the answer in any order.
 
 // Given nums = [2, 7, 11, 15], target = 9,
 // Because nums[0] + nums[1] = 2 + 7 = 9,
 // return [0, 1].
+```
+
+Solution:
+
+1. Brute force method
+
+```javascript
+const nums = [2, 7, 11, 15];
+const target = 9;
 
 const twoSum = (nums, target) => {
     let low = 0;
@@ -1995,7 +2002,45 @@ const twoSum = (nums, target) => {
     }
 };
 
-twoSum([2, 3, 4, 5, 6], 10);
+twoSum(nums, target);
+```
+
+2. When array are sorted
+
+```javascript
+const nums = [2, 7, 11, 15];
+const target = 9;
+
+const twoSum = (nums, target) => {
+    let low = 0;
+    let high = nums.length - 1;
+    while (low < high) {
+        if (nums[low] + nums[high] === target) return [low, high];
+        else if (nums[low] + nums[high] > target) high--;
+        else low++;
+    }
+};
+
+twoSum(nums, target);
+```
+
+3. When array is not sorted
+
+```javascript
+const nums = [2, 7, 11, 15];
+const target = 9;
+
+var twoSum = (nums, target) => {
+    const map = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (map[nums[i]] >= 0) {
+            return [map[nums[i]], i];
+        }
+        map[target - nums[i]] = i;
+    }
+};
+
+twoSum(nums, target);
 ```
 
 **[⬆ back to top](#table-of-contents)**
