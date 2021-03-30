@@ -2048,7 +2048,7 @@ var twoSum = (nums, target) => {
 twoSum(nums, target);
 ```
 
-<details>
+</details>
 
 **[⬆ back to top](#table-of-contents)**
 
