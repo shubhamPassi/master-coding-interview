@@ -4555,7 +4555,7 @@ To Do
     <details>
     <summary>Click to expand!</summary>
 
-    -   [412 Fizz Buzz](#412-fizz-buzz)
+    -   [412. Fizz Buzz](#412.-fizz-buzz)
     </details>
 
 -   [Amazon Interview Questions](3-Amazon-Interview-Questions.html)
@@ -4565,7 +4565,7 @@ To Do
 
 ### `Top Interview Questions`
 
-#### 412 Fizz Buzz
+#### 412. Fizz Buzz
 
 Question: Write a program that outputs the string representation of numbers from 1 to n.
 
