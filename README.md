@@ -4671,7 +4671,7 @@ Time Complexity: O(n)
 
 -   Don’t forget to move these two pointers (count3 and count5) and reset them once mod condition is met.
 
-<details>
+</details>
 
 **[⬆ back to Top Questions](#412-fizz-buzz)**
 
