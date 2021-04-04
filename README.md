@@ -4550,10 +4550,10 @@ To Do
 
 ## **Section 19: Extras: Google, Amazon, Facebook Interview Questions**
 
--   [Top Interview Questions](2-Top-Interview-Questions.html)
+-   [Top Interview Questions](#Top-Interview-Questions)
 
     <details>
-    <summary?>Click to expand!</summary>
+    <summary>Click to expand!</summary>
 
     -   [412 Fizz Buzz](#412-fizz-buzz)
     </details>
