@@ -4550,10 +4550,129 @@ To Do
 
 ## **Section 19: Extras: Google, Amazon, Facebook Interview Questions**
 
--   [Top Interview Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246878#content)
--   [Amazon Interview Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246840#content)
--   [Facebook Interview Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246842#content)
--   [Google Interview Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246838#content)
--   [Domain Specific Questions](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246846#content)
+-   [Top Interview Questions](2-Top-Interview-Questions.html)
+
+    <details>
+    <summary?>Click to expand!</summary>
+    - [412 Fizz Buzz](#412-fizz-buzz)
+
+    </details>
+
+-   [Amazon Interview Questions](3-Amazon-Interview-Questions.html)
+-   [Facebook Interview Questions](4-Facebook-Interview-Questions.html)
+-   [Google Interview Questions](5-Google-Interview-Questions.html)
+-   [Domain Specific Questions](6-Domain-Specific-Questions.html)
+
+### `Top Interview Questions`
+
+#### 412 Fizz Buzz
+
+Question: Write a program that outputs the string representation of numbers from 1 to n.
+
+But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+
+Example:
+
+```javascript
+n = 15,
+
+Return:
+[
+    "1",
+    "2",
+    "Fizz",
+    "4",
+    "Buzz",
+    "Fizz",
+    "7",
+    "8",
+    "Fizz",
+    "Buzz",
+    "11",
+    "Fizz",
+    "13",
+    "14",
+    "FizzBuzz"
+]
+```
+
+Solution:
+
+<details>
+<summary>Click to expand!</summary>
+
+Solution 1:
+After the first glance of this problem, mod should be pretty straightforward to solve this problem.
+
+```javascript
+const fizzbuzz = (n) => {
+    let i = 1;
+    while (i <= n) {
+        if (i % 15 === 0) {
+            console.log("fizzbuzz");
+            i++;
+            continue;
+        }
+        if (i % 3 === 0) {
+            console.log("fizz");
+            i++;
+            continue;
+        }
+        if (i % 5 === 0) {
+            console.log("buzz");
+            i++;
+            continue;
+        }
+        console.log(i);
+        i++;
+    }
+};
+
+fizzbuzz(15);
+```
+
+Time Complexity: O(n)
+
+But modulus and division are very expensive operations as they use loops implicitly in there algorithms.
+
+Solution 2:
+
+```javascript
+const fizzbuzz = (n) => {
+    let str = "";
+    let count3 = 0;
+    let count5 = 0;
+    for (let i = 1; i <= n; i++) {
+        count3++;
+        count5++;
+        if (count3 === 3) {
+            str += "fizz";
+            count3 = 0;
+        }
+        if (count5 === 5) {
+            str += "buzz";
+            count5 = 0;
+        }
+        if (str) {
+            console.log(str);
+            str = "";
+            continue;
+        }
+        console.log(i);
+    }
+};
+
+fizzbuzz(15);
+```
+
+Time Complexity: O(n)
+
+-   its Time Complexity is O(n) but in there internal machanisum they take more time to execute.
+
+-   Don’t forget to move these two pointers (count3 and count5) and reset them once mod condition is met.
+
+<details>
+
+**[⬆ back to Top Questions](#412-fizz-buzz)**
 
 **[⬆ back to top](#table-of-contents)**
