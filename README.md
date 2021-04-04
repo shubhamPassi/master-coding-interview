@@ -4673,6 +4673,6 @@ Time Complexity: O(n)
 
 </details>
 
-**[⬆ back to Top Questions](#412-fizz-buzz)**
+**[⬆ back to Questions](#section-19-extras-google-amazon-facebook-interview-questions)**
 
 **[⬆ back to top](#table-of-contents)**
