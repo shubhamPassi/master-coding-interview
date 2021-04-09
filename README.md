@@ -71,6 +71,7 @@
         -   [Implementing An Array](#implementing-an-array)
         -   [Exercise: Reverse A String](#exercise-reverse-a-string)
         -   [Exercise: Merge Sorted Arrays](#exercise-merge-sorted-arrays)
+        -   [Where Should We Use Arrays](#where-should-we-use-arrays)
         -   [Interview Questions: Arrays](#interview-questions-arrays)
         </details>
 
@@ -1880,7 +1881,7 @@ Thought process:
 Exercise:
 
 ```javascript
-// Merge sorted arrays or 2-Way merge surt
+// Merge sorted arrays or 2-Way merge sort
 // mergeSortedArrays([0,3,4,31],[4,6,30]);
 // return [ 0, 3, 4, 4, 6, 30, 31]
 ```
@@ -1910,7 +1911,7 @@ const mergeSortedArrays1 = (array1, array2) => {
     }
 
     for (; j < array2.length; j++) {
-        mergedArray.push(array1[i]);
+        mergedArray.push(array2[i]);
     }
     return mergedArray;
 };
@@ -1974,7 +1975,7 @@ Slow:
 
 ### Interview Questions: Arrays
 
-Question: [LeetCode Question 1](https://leetcode.com/problems/two-sum/description/)
+Question: [LeetCode Question 1 Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 ```javascript
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -2008,6 +2009,9 @@ const twoSum = (nums, target) => {
 };
 
 twoSum(nums, target);
+
+// Time Complexity : O(n)
+// Space Complexity: O(1)
 ```
 
 2. When array are sorted
@@ -2027,6 +2031,9 @@ const twoSum = (nums, target) => {
 };
 
 twoSum(nums, target);
+
+// Time Complexity : O(n)
+// Space Complexity: O(1)
 ```
 
 3. When array is not sorted
@@ -2046,7 +2053,268 @@ var twoSum = (nums, target) => {
 };
 
 twoSum(nums, target);
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 ```
+
+</details>
+
+Question: [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+
+```javascript
+// Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+// (Note-: that you must do this in-place without making a copy of the array.)
+
+// Example 1:
+// Input: nums = [0,1,0,3,12]
+// Output: [1,3,12,0,0]
+
+// Example 2:
+// Input: nums = [0]
+// Output: [0]
+```
+
+Solution:
+
+<details>
+    <summary>Click to expand!</summary>
+
+1. When the interviewer says the question, write down the key points at the top (i.e. sorted
+   array). Make sure you have all the details. Show how organized you are.
+
+```javascript
+Example 1:
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+Example 2:
+Input: nums = [0]
+Output: [0]
+```
+
+2. Make sure you double check: What are the inputs? What are the outputs?
+
+```javascript
+what is the input?
+1 parameters - array
+
+what is the output?
+return array
+```
+
+3. What is the most important value of the problem? Do you have time, and space and memory,
+   etc.. What is the main goal?
+
+```javascript
+1 parameters - array - no size limits - relative order of non-zero integers needs to remain the same as in original array - nagative values are allowed
+```
+
+4. Don't be annoying and ask too many questions.
+
+5. Start with the naive/brute force approach. First thing that comes into mind. It shows that
+   you’re able to think well and critically (you don't need to write this code, just speak about it).
+
+```javascript
+const moveZeroes = (nums) => {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 0) {
+            for (let j = i; j < nums.length; j++) {
+                nums[j] = nums[j + 1];
+            }
+            nums[nums.length - 1] = 0;
+        }
+    }
+    return nums;
+};
+
+const output = moveZeroes([0, 1, 0, 3, 12]);
+```
+
+6. Tell them why this approach is not the best (i.e. O(n^2) or higher, not readable, etc...)
+
+```javascript
+Time Complexcity - O(n^2)
+Space Complexcity - O(1)
+```
+
+7. Walk through your approach, comment things and see where you may be able to break things.
+   Any repetition, bottlenecks like O(N^2), or unnecessary work? Did you use all the information
+   the interviewer gave you? Bottleneck is the part of the code with the biggest Big O. Focus on
+   that. Sometimes this occurs with repeated work as well.
+
+8. Before you start coding, walk through your code and write down the steps you are going to
+   follow.
+
+```javascript
+
+.
+const moveZeroes = (nums) => {
+    const len = nums.length;
+
+// Initialize count = 0.
+    let count = 0;
+
+// Run a for loop from i = 0 to n-1 to traverse Aarray.
+    for (let i = 0; i < len; i++) {
+
+// At any step of iteration, if (nums[i] != 0) then update nums[count] = A[i] and increment count by 1. Here we are shifting each non-zero element to the start of array
+        if (nums[i] != 0) {
+            nums[count++] = nums[i];
+        }
+    }
+
+// After completing the loop, traverse A[] from count to n-1 and fill it with zeroes.
+    for (let i = count; i < len; i++) {
+        nums[i] = 0;
+    }
+    return nums;
+};
+
+const output = moveZeroes([0,1,0,3,12]);
+
+// Time Complexcity-: O(n+n)
+// Space complexcity-: O(1)
+```
+
+In this approach we have to traverse array for 2 times and if interviewer ask you to traverse an array only for one array then use swap,
+
+```javascript
+const moveZeroes = (nums) => {
+    const len = nums.length;
+    let count = 0;
+    let temp;
+
+    for (let i = 0; i < len; i++) {
+        if (nums[i] != 0) {
+            temp = nums[i];
+            nums[i] = nums[count];
+            nums[count++] = temp;
+        }
+    }
+    return nums;
+};
+
+const output = moveZeroes([0, 1, 0, 3, 12]);
+
+// Time Complexcity O(n)
+// Space Complexcity O(1)
+```
+
+9. Modularize your code from the very beginning. Break up your code into beautiful small pieces
+   and add just comments if you need to.
+
+```javascript
+const moveZeroes = (nums) => {
+    const len = nums.length;
+
+    // Initialize count = 0.
+    let count = 0;
+    let temp;
+
+    // Run a for loop from i = 0 to n-1.
+    for (let i = 0; i < len; i++) {
+        // At each iteration, if (nums[i] != 0), swap A[count] and A[i] and increment count by 1.
+        if (nums[i] != 0) {
+            temp = nums[i];
+            nums[i] = nums[count];
+            nums[count++] = temp;
+        }
+    }
+
+    // Return nums.
+    return nums;
+};
+
+const output = moveZeroes([0, 1, 0, 3, 12]);
+
+// Time Complexcity O(n)
+// Space Complexcity O(1)
+```
+
+10. Start actually writing your code now. Keep in mind that the more you prepare and understand
+    what you need to code, the better the whiteboard will go. So never start a whiteboard
+    interview not being sure of how things are going to work out. That is a recipe for disaster.
+    Keep in mind: A lot of interviews ask questions that you won’t be able to fully answer on time.
+    So think: What can I show in order to show that I can do this and I am better than other
+    coders. Break things up in Functions (if you can’t remember a method, just make up a function
+    and you will at least have it there. Write something, and start with the easy part.
+
+```javascript
+const swap = (nums, i, count) => {
+    let temp;
+
+    temp = nums[i];
+    nums[i] = nums[count];
+    nums[count] = temp;
+    return nums;
+};
+
+const moveZeroes = (nums) => {
+    const len = nums.length;
+
+    // Initialize count = 0.
+    let count = 0;
+
+    // Run a for loop from i = 0 to n-1.
+    for (let i = 0; i < len; i++) {
+        if (nums[i] != 0) {
+            // At each iteration, if (nums[i] != 0), swap A[count] and A[i] and increment count by 1.
+            swap(nums, i, count++);
+        }
+    }
+    return nums;
+};
+
+const output = moveZeroes([0, 1, 0, 3, 12]);
+
+// Time Complexcity O(n)
+// Space Complexcity O(1)
+```
+
+11. Think about error checks and how you can break this code. Never make assumptions about the
+    input. Assume people are trying to break your code and that Darth Vader is using your
+    function. How will you safeguard it? Always check for false inputs that you don’t want. Here is
+    a trick: Comment in the code, the checks that you want to do… write the function, then tell the
+    interviewer that you would write tests now to make your function fail (but you won't need to
+    actually write the tests).
+
+12. Don’t use bad/confusing names like i and j. Write code that reads well.
+
+13. Test your code: Check for no params, 0, undefined, null, massive arrays, async code, etc… Ask
+    the interviewer if we can make assumption about the code. Can you make the answer return
+    an error? Poke holes into your solution. Are you repeating yourself?
+
+```javascript
+const swap = (nums, i, count) => {
+    let temp;
+
+    temp = nums[i];
+    nums[i] = nums[count];
+    nums[count] = temp;
+    return nums;
+};
+
+const moveZeroes = (nums) => {
+    const len = nums.length;
+    let count = 0;
+    for (let i = 0; i < len; i++) {
+        if (nums[i] != 0) {
+            swap(nums, i, count++);
+        }
+    }
+    return nums;
+};
+
+const output = moveZeroes([0, 1, 0, 3, 12]);
+
+console.log(output);
+```
+
+14. Finally talk to the interviewer where you would improve the code. Does it work? Are there different approaches? Is it readable? What would you google to improve? How can performance be improved? Possibly: Ask the interviewer what was the most interesting solution you have seen to this problem
+
+15. If your interviewer is happy with the solution, the interview usually ends here. It is also common that the interviewer asks you extension questions, such as how you would handle the problem if the whole input is too large to fit into memory, or if the input arrives as a stream. This is a common follow-up question at Google, where they care a lot about scale. The answer is usually a divide-and-conquer approach — perform distributed processing of the data and only read certain chunks of the input from disk into memory, write the output back to disk and combine them later.
 
 </details>
 
