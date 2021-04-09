@@ -1975,7 +1975,7 @@ Slow:
 
 ### Interview Questions: Arrays
 
-Question: [LeetCode Question 1 Two Sum](https://leetcode.com/problems/two-sum/description/)
+`Question:` [LeetCode Question 1 Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 ```javascript
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -2060,7 +2060,7 @@ twoSum(nums, target);
 
 </details>
 
-Question: [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+`Question:` [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
 ```javascript
 // Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
