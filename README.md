@@ -2147,38 +2147,39 @@ Space Complexcity - O(1)
 8. Before you start coding, walk through your code and write down the steps you are going to
    follow.
 
-```javascript
+-   Two Pointer Approach I: In-place using two traversals
 
-.
+```javascript
 const moveZeroes = (nums) => {
     const len = nums.length;
 
-// Initialize count = 0.
+    // Initialize count = 0.
     let count = 0;
 
-// Run a for loop from i = 0 to n-1 to traverse Aarray.
+    // Run a for loop from i = 0 to n-1 to traverse Aarray.
     for (let i = 0; i < len; i++) {
-
-// At any step of iteration, if (nums[i] != 0) then update nums[count] = A[i] and increment count by 1. Here we are shifting each non-zero element to the start of array
+        // At any step of iteration, if (nums[i] != 0) then update nums[count] = A[i] and increment count by 1. Here we are shifting each non-zero element to the start of array
         if (nums[i] != 0) {
             nums[count++] = nums[i];
         }
     }
 
-// After completing the loop, traverse A[] from count to n-1 and fill it with zeroes.
+    // After completing the loop, traverse A[] from count to n-1 and fill it with zeroes.
     for (let i = count; i < len; i++) {
         nums[i] = 0;
     }
     return nums;
 };
 
-const output = moveZeroes([0,1,0,3,12]);
+const output = moveZeroes([0, 1, 0, 3, 12]);
 
 // Time Complexcity-: O(n+n)
 // Space complexcity-: O(1)
 ```
 
 In this approach we have to traverse array for 2 times and if interviewer ask you to traverse an array only for one array then use swap,
+
+-   Two Pointer Approach II: In-place using one traversal
 
 ```javascript
 const moveZeroes = (nums) => {
