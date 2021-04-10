@@ -2319,6 +2319,103 @@ console.log(output);
 
 </details>
 
+`Question:` [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/contains-duplicate/)
+
+```javascript
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+// Example 1:
+// Input: nums = [1,2,3,1]
+// Output: true
+
+// Example 2:
+// Input: nums = [1,2,3,4]
+// Output: false
+
+// Example 3:
+// Input: nums = [1,1,1,3,3,4,3,2,4,2]
+// Output: true
+```
+
+Solution:
+
+<details>
+    <summary>Click to expand!</summary>
+
+1. Brute force method
+
+```javascript
+let containsDuplicate = function (nums) {
+    if (nums.length < 1) {
+        return false;
+    }
+    for (let i = 0; i < nums.length - 1; i++) {
+        let j = i + 1;
+        while (j < nums.length) {
+            if (nums[i] === nums[j]) {
+                return true;
+            }
+            j++;
+        }
+    }
+    return false;
+};
+console.log(containsDuplicate([1, 2, 3, 1]));
+// Time Complexity O(n^2)
+// Space complexity O(1)
+```
+
+2. By creating new object
+
+```javascript
+const containsDuplicate = (nums) => {
+    map = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (map[i]) {
+            return true;
+        }
+        map[i] = true;
+    }
+    return false;
+};
+
+containsDuplicate([1, 2, 3, 1]);
+// Time Complexity O(n)
+// Space complexity O(n)
+```
+
+3. By Sorting an array and check if there is pair of maching elements
+
+```javascript
+const containsDuplicate = (nums) => {
+    let array = nums.sort((a, b) => a - b);
+    for (let i = 0; i < nums.length; i++) {
+        if (array[i] === array[i + 1]) {
+            return true;
+        }
+    }
+    return false;
+};
+
+containsDuplicate([1, 2, 3, 1]);
+// Time Complexity O(n+n)
+// Space complexity O(n)
+```
+
+4. By cheching length of array with size of setting
+
+```javascript
+let containsDuplicate = (nums) => {
+    return nums.length !== new Set(nums).size;
+};
+
+containsDuplicate([1, 2, 3, 1]);
+// Time Complexity O(n)
+// Space complexity O(n)
+```
+
+</details>
+
 **[⬆ back to top](#table-of-contents)**
 
 ## **Section 7: Data Structures: Hash Tables**
