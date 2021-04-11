@@ -2437,7 +2437,7 @@ Hash tables offer a combination of efficient **lookup**, **insert** and **delete
 | delete    | O(1)  |
 | search    | O(1)  |
 
-![](hash-table-working.gif)
+![](2021-04-11_19-07-47.gif)
 
 A way in which the hash table works is we have the key which is grapes and this key is used as the index of where to find the value in memory. This is done with the help of **hash functions**.
 
@@ -2557,8 +2557,8 @@ Double hashing is similar to linear probing and the only difference is the inter
 
 Let us say that the hashed index for an entry record is an index that is computed by one hashing function and the slot at that index is already occupied. You must start traversing in a specific probing sequence to look for an unoccupied slot. The probing sequence will be:
 
-index = (index + 1 * indexH) % hashTableSize;
-index = (index + 2 * indexH) % hashTableSize;
+index = (index + 1 _ indexH) % hashTableSize;
+index = (index + 2 _ indexH) % hashTableSize;
 
 and so on…
 
