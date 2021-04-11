@@ -2434,8 +2434,8 @@ Hash tables offer a combination of efficient **lookup**, **insert** and **delete
 | --------- | ----- |
 | insert    | O(1)  |
 | lookup    | O(1)  |
-| delete    | O(n)  |
-| search    | O(n)  |
+| delete    | O(1)  |
+| search    | O(1)  |
 
 ![](hash-table-working.gif)
 
@@ -2501,6 +2501,13 @@ Time Complexity - O(n/k) [k is the size of the hash table]
 So one of the way to solve this problem is with the use of Linked Lists
 
 ![](hash-tables-collisions.jpg)
+
+| Operation | Big O |
+| --------- | ----- |
+| insert    | O(1)  |
+| lookup    | O(1)  |
+| delete    | O(n)  |
+| search    | O(n)  |
 
 **[⬆ back to top](#table-of-contents)**
 
