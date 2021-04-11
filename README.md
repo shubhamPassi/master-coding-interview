@@ -2564,7 +2564,7 @@ and so on…
 
 Here, indexH is the hash value that is computed by another hash function.
 
-![Sorce](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
+[Sorce](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
 
 **[⬆ back to top](#table-of-contents)**
 
