@@ -2422,6 +2422,14 @@ containsDuplicate([1, 2, 3, 1]);
 
 ### Hash Tables Introduction
 
+A hash table is an **unordered** collection of **key-value** pairs, where each key is **unique**.
+
+Hash tables offer a combination of efficient **lookup**, **insert** and **delete** operations. Neither arrays nor linked lists can achieve this:
+
+-   A lookup in an unsorted array takes linear worst-case time.
+-   In a sorted array, a lookup using binary search is very fast, but insertions become inefficient;
+-   In a linked list an insertion can be efficient, but lookups take linear time.
+
 | Operation | Big O |
 | --------- | ----- |
 | insert    | O(1)  |
@@ -2429,7 +2437,16 @@ containsDuplicate([1, 2, 3, 1]);
 | delete    | O(n)  |
 | search    | O(n)  |
 
+![](hash-table-working.gif)
+
+A way in which the hash table works is we have the key which is grapes and this key is used as the index of where to find the value in memory. This is done with the help of **hash functions**.
+
 [Hash Table Animation](https://www.cs.usfca.edu/~galles/visualization/OpenHash.html)
+
+**Explanation:**
+We're going to pass grapes in the hash function and out of the hash function comes a key into an index where we want to store the value. So now, key='grapes' and value=1000 are stored in the memory address of 711.
+
+![](hash-table.png)
 
 ![](hash-tables.jpg)
 
@@ -2453,11 +2470,35 @@ The clerk only had to inspect three letters. How many letters would he have to i
 
 ### Hash Function
 
+Hash function is simply a function that generates a value of fixed length for each input that gets. When we give input to a hash function it generates a random pattern.
+
+There are some key aspects of hash functions.
+
+-   Its a one way in a sense that we cant find what is the input with the help of hash function's output.
+
+-   No matter how many times we put hello in hash function it's always give the same output. but if we change the input then it will change the output completely. This is called indempotent. Now the one benefit to use indempotent in data structures is that we get really fast data access because all we have to do to get value from the key is to pass that in hash function like md5 hash or SHA-256(It takes really long tim to generate a hash and used in cryptography) and it will generates the number and we immieately where the value is stored in computer.
+
+Hash function which are used in programming languages are implementated with an Optimum Hashing Function that's really fast and we usally assume a time complexity of O(1).
+
 [md5 Hash Generator](http://www.miraclesalad.com/webtools/md5.php)
 
 **[⬆ back to top](#table-of-contents)**
 
 ### Hash Collisions
+
+![](hash-collision.gif)
+
+The hash function randomly assigned a space in memory and put it in the place where it already assigned memory. There is nothing telling the hash function to evenly distribute until everything is full. Although hash functions are optimized to try to distribute this data all over. So when 55 gets hashed Well this hash function generates the address location of three to put in it. And because we already have three there it does something funny here. what we just noticed here it's something called Collision.
+
+![](hash-collision-1.gif)
+
+With hash tables we can't avoid these collisions with enough data with limited memory. We're always going to have this collision. So there is a possibility that we costly just keep adding to the same memory space.
+
+So, when you have a collision it slows down reading and writing with a hash table.
+Time Complexity - O(n/k) [k is the size of the hash table]
+= O(n)
+
+So one of the way to solve this problem is with the use of Linked Lists
 
 ![](hash-tables-collisions.jpg)
 
