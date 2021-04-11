@@ -2527,10 +2527,12 @@ When searching for an entry, the array is scanned in the same sequence until eit
 
 Linear probing is when the interval between successive probes is fixed (usually to 1). Let’s assume that the hashed index for a particular entry is index. The probing sequence for linear probing will be:
 
-index = index % hashTableSize
-index = (index + 1) % hashTableSize
-index = (index + 2) % hashTableSize
-index = (index + 3) % hashTableSize
+```javascript
+index = index % hashTableSize;
+index = (index + 1) % hashTableSize;
+index = (index + 2) % hashTableSize;
+index = (index + 3) % hashTableSize;
+```
 
 and so on…
 
@@ -2544,10 +2546,12 @@ Quadratic probing is similar to linear probing and the only difference is the in
 
 Let us assume that the hashed index for an entry is index and at index there is an occupied slot. The probe sequence will be as follows:
 
-index = index % hashTableSize
-index = (index + 12) % hashTableSize
-index = (index + 22) % hashTableSize
-index = (index + 32) % hashTableSize
+```javascript
+index = index % hashTableSize;
+index = (index + 12) % hashTableSize;
+index = (index + 22) % hashTableSize;
+index = (index + 32) % hashTableSize;
+```
 
 and so on…
 
@@ -2557,8 +2561,10 @@ Double hashing is similar to linear probing and the only difference is the inter
 
 Let us say that the hashed index for an entry record is an index that is computed by one hashing function and the slot at that index is already occupied. You must start traversing in a specific probing sequence to look for an unoccupied slot. The probing sequence will be:
 
-index = (index + 1 _ indexH) % hashTableSize;
-index = (index + 2 _ indexH) % hashTableSize;
+```javascript
+index = (index + 1 _indexH) % hashTableSize;
+index = (index + 2 _indexH) % hashTableSize;
+```
 
 and so on…
 
