@@ -82,6 +82,7 @@
         -   [Hash Tables Introduction](#hash-tables-introduction)
         -   [Hash Function](#hash-function)
         -   [Hash Collisions](#hash-collisions)
+        -   [Map and Sets](#map-and-sets)
         -   [Exercise: Implement A Hash Table](#exercise-implement-a-hash-table)
         -   [Hash Tables VS Arrays](#hash-tables-vs-arrays)
         -   [Exercise: First Recurring Character](#exercise-first-recurring-character)
@@ -2571,6 +2572,28 @@ and so on…
 Here, indexH is the hash value that is computed by another hash function.
 
 [Source](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
+
+**[⬆ back to top](#table-of-contents)**
+
+### Map And Sets
+
+**Map**
+
+-   The key defference between map and object is obeject can only take string as a key but map can take any data type as key.
+
+-   Map maintains insertion order which means there is no order when we insert key value in object the key is inserted in any address randomly.
+
+```javascript
+const map = new Map();
+```
+
+**sets**
+
+-   it is very simple to map but the only difference is that it only stores keys no values.
+
+```javascript
+const set = new Set();
+```
 
 **[⬆ back to top](#table-of-contents)**
 
