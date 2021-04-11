@@ -2466,6 +2466,8 @@ Real life examples
 
 The clerk only had to inspect three letters. How many letters would he have to inspect if there would have been only one letter box?
 
+![Sorce](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
+
 **[⬆ back to top](#table-of-contents)**
 
 ### Hash Function
