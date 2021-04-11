@@ -2587,7 +2587,7 @@ Here, indexH is the hash value that is computed by another hash function.
 const map = new Map();
 ```
 
-**sets**
+**Set**
 
 -   it is very simple to map but the only difference is that it only stores keys no values.
 
