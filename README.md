@@ -2061,7 +2061,7 @@ twoSum(nums, target);
 
 </details>
 
-`Question:` [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+`Question:` [LeetCode Question 283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
 ```javascript
 // Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
@@ -2320,7 +2320,7 @@ console.log(output);
 
 </details>
 
-`Question:` [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/contains-duplicate/)
+`Question:` [LeetCode Question 217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
 ```javascript
 // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
