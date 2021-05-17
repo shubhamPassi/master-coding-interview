@@ -2061,7 +2061,7 @@ twoSum(nums, target);
 
 </details>
 
-`Question:` [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+`Question:` [LeetCode Question 283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
 ```javascript
 // Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
@@ -2320,7 +2320,7 @@ console.log(output);
 
 </details>
 
-`Question:` [LeetCode Question 283 Move Zeroes](https://leetcode.com/problems/contains-duplicate/)
+`Question:` [LeetCode Question 217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
 ```javascript
 // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
@@ -2477,7 +2477,7 @@ There are some key aspects of hash functions.
 
 -   Its a one way in a sense that we cant find what is the input with the help of hash function's output.
 
--   No matter how many times we put hello in hash function it's always give the same output. but if we change the input then it will change the output completely. This is called indempotent. Now the one benefit to use indempotent in data structures is that we get really fast data access because all we have to do to get value from the key is to pass that in hash function like md5 hash or SHA-256(It takes really long tim to generate a hash and used in cryptography) and it will generates the number and we immieately where the value is stored in computer.
+-   No matter how many times we put hello in hash function it's always give the same output. but if we change the input then it will change the output completely. This is called indempotent. Now the one benefit to use indempotent in data structures is that we get really fast data access because all we have to do to get value from the key is to pass that in hash function like md5 hash or SHA-256(It takes really long tim to generate a hash and used in cryptography) and it will generates the number where the value is stored in computer.
 
 Hash function which are used in programming languages are implementated with an Optimum Hashing Function that's really fast and we usally assume a time complexity of O(1).
 
@@ -2493,7 +2493,7 @@ The hash function randomly assigned a space in memory and put it in the place wh
 
 ![](hash-collision-1.gif)
 
-With hash tables we can't avoid these collisions with enough data with limited memory. We're always going to have this collision. So there is a possibility that we costly just keep adding to the same memory space.
+With hash tables we can't avoid these collisions with enough data with limited memory. We're always going to have this collision. So there is a possibility that we could just keep adding to the same memory space.
 
 So, when you have a collision it slows down reading and writing with a hash table.
 Time Complexity - O(n/k) [k is the size of the hash table]
