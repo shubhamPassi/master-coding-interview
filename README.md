@@ -2499,7 +2499,17 @@ So, when you have a collision it slows down reading and writing with a hash tabl
 Time Complexity - O(n/k) [k is the size of the hash table]
 = O(n)
 
-Collision resolution techniques
+#### **Collision resolution techniques**
+
+-   **Open Hashing**
+
+    -   Chaining
+
+-   **Closed Hashing**
+    -   Open Addressing
+        1. Linear Probing
+        2. Quadratic Probing
+        3. Double Hashing
 
 **Separate chaining (open hashing)**
 
